@@ -236,5 +236,9 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@2.0.vendor
 
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
+
 # Inherit IMS vendor
 #$(call inherit-product, vendor/xiaomi/ims-fleur/mtk-ims.mk)
