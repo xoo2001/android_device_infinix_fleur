@@ -171,7 +171,12 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *    
 
-# Public Libraries
+# MTK IMS Overlays
+PRODUCT_PACKAGES += \
+    mtk-ims \
+    mtk-ims-telephony
+
+# Permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
 
