@@ -92,6 +92,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ImsInit
 
+# ImsService
+PRODUCT_PACKAGES += \
+    com.android.ims.rcsmanager \
+    PresencePolling \
+    RcsService \
+    ImsServiceBase
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.fleur
