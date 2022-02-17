@@ -155,10 +155,6 @@
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="44100,48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </devicePort>
-                <devicePort tagName="BT SCO" type="AUDIO_DEVICE_OUT_BLUETOOTH_SCO" role="sink">
-                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
-                             samplingRates="8000,16000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
-                </devicePort>
                 <devicePort tagName="BT SCO Headset" type="AUDIO_DEVICE_OUT_BLUETOOTH_SCO_HEADSET" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000,16000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
@@ -267,11 +263,11 @@
                 <route type="mix" sink="USB Headset Out"
                        sources="primary output,deep_buffer,fast,FM Tuner In,voip_rx,Voice Call In,hifi_playback"/>
                 <route type="mix" sink="BT SCO"
-                       sources="primary output,deep_buffer,fast,voip_rx,Voice Call In"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
                 <route type="mix" sink="BT SCO Headset"
-                       sources="primary output,deep_buffer,fast,voip_rx,Voice Call In"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
                 <route type="mix" sink="BT SCO Car Kit"
-                       sources="primary output,deep_buffer,fast,voip_rx,Voice Call In"/>
+                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
                 <route type="mix" sink="Analog Dock Headset"
                        sources="primary output"/>
                 <route type="mix" sink="Digital Dock Headset"
