@@ -795,6 +795,7 @@ on post-fs-data
     chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmic.5-001a/reg_addr
     chmod 0664 sys/kernel/debug/rt-regmap/mt6360_ldo.5-0064/reg_addr
     chmod 0664 sys/kernel/debug/rt-regmap/mt6360-4e/reg_addr
+    setprop init.svc.console stopped
 
 # End of adding by MTK drivers
 # -----------------------
@@ -863,6 +864,9 @@ on boot
 
     # Permission for cit sarsensor
     chmod 0666 /sys/devices/platform/sar_hub_s/sar_trace
+
+# Prevents permission denied error for telephony
+    chmod 0644 /proc/cmdline
 
 # Smartbook Handler Framework
     chown system system /sys/power/sb_state
@@ -1214,3 +1218,7 @@ on  property:vendor.elliptic.sensor.test=1
     start ellipticSensorTest
 on  property:vendor.elliptic.sensor.test=0
     stop ellipticSensorTest
+
+# Kill AOSP RIL
+#on property:vendor.ril.mtk=1
+#    stop vendor.ril-daemon
