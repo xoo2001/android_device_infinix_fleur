@@ -36,6 +36,9 @@ lib64/libldacBT_abr.so
 lib/libldacBT_enc.so
 lib64/libldacBT_enc.so
 
+# Camera
+vendor/lib64/libmtkcam_featurepolicy.so
+
 # Charger (Xiaomi)
 bin/charger:bin/chargeonlymode
 
