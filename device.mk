@@ -50,9 +50,13 @@ PRODUCT_PACKAGES_DEBUG += \
 # API level, the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 30
 
-# Audio
+# Audio Config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml
+
+#Audio HAL
+PRODUCT_PACKAGES += \
+    android.hardware.audio.service.mediatek
 
 #APN config
 PRODUCT_COPY_FILES += \
