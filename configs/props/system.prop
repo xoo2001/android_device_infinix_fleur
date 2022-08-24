@@ -23,6 +23,9 @@ ro.vendor.mtk.bt_sap_enable=true
 persist.bluetooth.a2dp_offload.disabled=true
 ro.bluetooth.a2dp_offload.supported=false
 
+# Sysbta
+persist.bluetooth.system_audio_hal.enabled=1
+
 # Brand
 Build.BRAND=MTK
 
