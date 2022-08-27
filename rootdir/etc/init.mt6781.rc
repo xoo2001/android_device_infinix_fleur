@@ -73,3 +73,14 @@ on property:persist.sys.fleur.dt2w=1
 # Restrict permissions to socket file 
     # to hide Magisk & co.
     chmod 440 /proc/net/unix
+
+service charger /system/bin/chargeonlymode
+    class charger
+    critical
+    group system graphics
+    seclabel u:r:healthd:s0
+
+on charger
+    # Turn backlight on and switch to backlight trigger
+    write /sys/class/leds/lcd-backlight/brightness "1000"
+    write /sys/class/leds/lcd-backlight/trigger "backlight"
