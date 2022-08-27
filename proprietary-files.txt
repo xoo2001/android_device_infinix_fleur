@@ -38,7 +38,6 @@ lib64/libldacBT_enc.so
 
 # Charger (Xiaomi)
 bin/charger:bin/chargeonlymode
-vendor/bin/batterysecret
 
 # Patched IMSService APK, from fleur-user 12 SP1A.210812.016 V13.0.9.0.SKEMIXM release-keys
 # https://github.com/Nem1xx/ImsService
