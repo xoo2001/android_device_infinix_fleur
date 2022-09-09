@@ -20,7 +20,7 @@ $(call inherit-product, vendor/xiaomi/fleur/fleur-vendor.mk)
 
 # Audio
 #PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+#    $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
 
 # A/B
 AB_OTA_UPDATER := true
@@ -189,7 +189,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.emmc:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.emmc
+    $(DEVICE_PATH)/rootdir/etc/fstab.emmc:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.emmc
 
 # Radio
 PRODUCT_PACKAGES += \
