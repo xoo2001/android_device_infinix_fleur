@@ -127,6 +127,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     MtkInCallService
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth@1.1.vendor
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
