@@ -1,7 +1,9 @@
+
+
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-** Copyright 2019, The LineageOS Project
+** Copyright 2020, The Android Open Source Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -16,10 +18,12 @@
 ** limitations under the License.
 */
 -->
+<resources>
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- System-provided radius for the background view of app widgets. -->
+    <dimen name="system_app_widget_background_radius">16.72998dip</dimen>
 
-    <!-- Whether device has screen with higher aspect ratio -->
-    <bool name="config_haveHigherAspectRatioScreen">true</bool>
+    <!-- System-provided radius for inner views on app widgets. -->
+    <dimen name="system_app_widget_inner_radius">8.72998dip</dimen>
 
 </resources>

@@ -23,26 +23,26 @@ public class PhoneStateService extends Service {
 
     private void handleServiceStateChanged(ServiceState serviceState) {
         ConnectivityManager cm;
-                cm = (ConnectivityManager)this.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        cm = (ConnectivityManager)this.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         Log.i(LOG_TAG, "handleServiceStateChanged");
-        if ((sLastState == null || sLastState.getDataRegState() != ServiceState.STATE_IN_SERVICE)
-                && serviceState.getDataRegState() == ServiceState.STATE_IN_SERVICE) {
+        if (((sLastState == null) ? true : (sLastState.getDataRegState() != ServiceState.STATE_IN_SERVICE))
+                && ((serviceState == null) ? false : (serviceState.getDataRegState() == ServiceState.STATE_IN_SERVICE))) {
             SharedPreferences prefs = getSharedPreferences("prefs", Context.MODE_PRIVATE);
 
 	    // this looks stupid XD, will fix it later (atleast it works XD)
             if (true) {
                 Log.i(LOG_TAG, "VoLTE enabled, trying to toggle it off and back on");
                 ImsManager.setEnhanced4gLteModeSetting(this, false);
-                new Thread(() -> {
+		new Thread(() -> {
                     try {
-                        // wait for 1 second
+			// wait for 1 second
                         Thread.sleep(1000);
                     } catch (Exception e) {
                         // Ignore
                     }
-                    Log.i(LOG_TAG, "Trying to request network!");
+		    Log.i(LOG_TAG, "Trying to request network!");
                     ImsManager.setEnhanced4gLteModeSetting(this, true);
-                    NetworkRequest.Builder req = new NetworkRequest.Builder();
+		    NetworkRequest.Builder req = new NetworkRequest.Builder();
                     req.addCapability(NetworkCapabilities.NET_CAPABILITY_IMS);
                     cm.requestNetwork(req.build(), new ConnectivityManager.NetworkCallback() {
                     @Override

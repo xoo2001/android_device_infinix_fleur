@@ -1,5 +1,8 @@
+
+
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2009 The Android Open Source Project
+<!--
+     Copyright (C) 2020 The LineageOS Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -11,17 +14,15 @@
      limitations under the License.
 -->
 
-<!-- NOTE: Many variables that used to be in this file have been migrated to
-     CarrierConfigManager.java. Please consider whether new variables belong
-     there before adding to this file. Variables here should be more closely
-     related to devices than to networks. -->
-
-<!-- Phone app resources that may need to be customized
+<!-- Camera app resources that may need to be customized
      for different hardware or product builds. -->
 <resources>
-    <!-- Flag indicating if hac is enabled -->
-    <bool name="hac_enabled">true</bool>
+    <!-- Enable support for camera api v2 -->
+    <bool name="support_camera_api_v2">true</bool>
 
-    <!-- Show enabled lte option for lte device -->
-    <bool name="config_enabled_lte" translatable="false">true</bool>
+    <!-- Opens back camera using openLegacy() -->
+    <bool name="back_camera_open_legacy">false</bool>
+
+    <!-- Opens front camera using openLegacy() -->
+    <bool name="front_camera_open_legacy">false</bool>
 </resources>

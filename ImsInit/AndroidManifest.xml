@@ -4,10 +4,10 @@
     android:versionCode="1"
     android:versionName="1.0"
     android:sharedUserId="android.uid.phone">
-
+    
     <application
         android:persistent="true">
-        <receiver android:name="org.lineageos.xiaomi.imsinit.BootCompletedReceiver" android:exported="true">
+        <receiver android:name="org.lineageos.xiaomi.imsinit.BootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -15,5 +15,10 @@
         </receiver>
         <service android:name="org.lineageos.xiaomi.imsinit.PhoneStateService"/>
     </application>
+
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.DIAGNOSTIC"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
 </manifest>

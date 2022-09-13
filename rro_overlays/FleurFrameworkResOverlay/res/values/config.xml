@@ -283,6 +283,7 @@
     <integer-array name="config_screenDarkeningThresholds">
         <item>0</item>
     </integer-array>
+
 <!-- Fingerprint -->
 
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
