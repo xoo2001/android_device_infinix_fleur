@@ -37,6 +37,9 @@ vendor.hbm.enable=true
 # Fingerprint
 ro.hardware.fp.sideCap=true
 
+# FUSE
+persist.sys.fuse.passthrough.enable=true
+
 # GPU
 ro.opengles.version=196610
 
