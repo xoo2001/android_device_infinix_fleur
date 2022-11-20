@@ -144,25 +144,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     mtk-ims \
     mtk-ims-telephony \
-    ImsInit \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage \
-
-# Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *    
-
-# MTK IMS Overlays
-PRODUCT_PACKAGES += \
-    mtk-ims \
-    mtk-ims-telephony
-
-# MTK IMS Overlays
-PRODUCT_PACKAGES += \
-    mtk-ims \
-    mtk-ims-telephony
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -181,7 +167,7 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     RcsService \
     PresencePolling
-        
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     factory_init.connectivity.rc \
@@ -229,7 +215,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_vtservice \
     libshim_beanpod.vendor
-    
+
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
@@ -243,7 +229,7 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
-    
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
 
@@ -261,6 +247,3 @@ PRODUCT_PACKAGES += \
 # Wi-Fi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
-
-# Inherit IMS vendor
-#$(call inherit-product, vendor/xiaomi/ims-fleur/mtk-ims.mk)
