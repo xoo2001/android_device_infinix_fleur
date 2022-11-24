@@ -867,6 +867,7 @@ on boot
 
 # Prevents permission denied error for telephony
     chmod 0644 /proc/cmdline
+    chown system system /proc/cmdline
 
 # Smartbook Handler Framework
     chown system system /sys/power/sb_state
