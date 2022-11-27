@@ -84,6 +84,10 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0_system
 
+# ImsInit hack
+PRODUCT_PACKAGES += \
+    ImsInit
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
