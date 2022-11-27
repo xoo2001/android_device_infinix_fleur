@@ -230,6 +230,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
+# Telephony
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-common \
+    mediatek-telecom-common \
+    mediatek-telephony-base \
+    mediatek-telephony-common \
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
 
