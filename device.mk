@@ -76,6 +76,7 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
+    libsuspend \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
@@ -233,6 +234,10 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
+
+# Properties
+-include $(DEVICE_PATH)/system_prop.mk
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Telephony
 PRODUCT_BOOT_JARS += \
