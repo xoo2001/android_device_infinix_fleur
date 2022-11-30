@@ -178,6 +178,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 TARGET_NO_RECOVERY := true
+TARGET_RECOVERY_UI_BLANK_UNBLANK_ON_INIT := true
 
 #-include vendor/xiaomi/fleur/BoardConfigVendor.mk
 #-include vendor/xiaomi/ims-fleur/mtk-ims.mk
