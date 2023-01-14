@@ -61,7 +61,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # DT2W
 PRODUCT_PACKAGES += \
-    DT2W-Service-Rosemary
+    DT2W-Service-fleur
 
 # Dynamic partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
