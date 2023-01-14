@@ -59,6 +59,10 @@ PRODUCT_PACKAGES_DEBUG += \
 # API level, the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# DT2W
+PRODUCT_PACKAGES += \
+    DT2W-Service-Rosemary
+
 # Dynamic partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
