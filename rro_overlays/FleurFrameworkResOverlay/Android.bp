@@ -1,6 +1,0 @@
-runtime_resource_overlay {
-    name: "FleurFrameworkResOverlay",
-    theme: "FleurFrameworkResOverlay",
-    sdk_version: "current",
-    product_specific: true
-}
