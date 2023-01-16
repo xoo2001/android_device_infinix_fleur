@@ -1,3 +1,0 @@
-# Required for our current dt2w fix
-allow toolbox input_device:dir search;
-allow toolbox input_device:chr_file rw_file_perms;
