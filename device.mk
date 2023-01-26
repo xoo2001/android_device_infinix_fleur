@@ -252,6 +252,9 @@ PRODUCT_BOOT_JARS += \
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
 
+# Extra VNDK Versions
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
+
 # WiFi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
