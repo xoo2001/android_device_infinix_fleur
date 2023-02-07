@@ -97,6 +97,7 @@ ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 debug.sf.latch_unsignaled=0
+debug.sf.disable_client_composition_cache=1
 
 # USB
 ro.sys.usb.mtp.whql.enable=0
