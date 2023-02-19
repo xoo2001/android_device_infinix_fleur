@@ -15,7 +15,7 @@
 //
 
 runtime_resource_overlay {
-    name: "SettingsOverlayFleur",
+    name: "SystemUIOverlayFleur",
     sdk_version: "current",
     resource_dirs: ["res"],
     vendor: true
