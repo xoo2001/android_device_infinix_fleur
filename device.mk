@@ -152,8 +152,15 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage \
+    $(LOCAL_PATH)/overlay
+
+# Runtime Resource Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResOverlayFleur \
+    TetheringOverlayFleur \
+    WifiOverlayFleur \
+    SystemUIOverlayFleur \
+    SettingsOverlayFleur
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -199,10 +206,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/etc/fstab.emmc:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.emmc
-
-# RRO Overlays
-PRODUCT_PACKAGES += \
-    SettingsOverlayFleur \
 
 # Radio
 PRODUCT_PACKAGES += \
