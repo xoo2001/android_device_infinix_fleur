@@ -44,6 +44,10 @@ on init
     # add this link for cust mount
     symlink /dev/block/platform/bootdevice /dev/block/bootdevice
 
+#DT2W
+    chown system system /proc/tp_gesture
+    chmod 0660 /proc/tp_gesture
+
 # change lk_env permission
     chown root system /proc/lk_env
     chmod 0660 /proc/lk_env
