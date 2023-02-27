@@ -9,18 +9,17 @@ import /init.environ.rc
 import /vendor/etc/init/trustonic.rc
 import ${ro.vendor.rc}init.nvdata.rc
 import /vendor/etc/init/microtrust.rc
-
 import /vendor/etc/init/vendor.microtrust.hardware.capi@2.0-service.rc
 import /vendor/etc/init/android.hardware.keymaster@4.0-service.beanpod.rc
+import /vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc
 import /vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
 import /vendor/etc/init/vendor.microtrust.hardware.thh@2.0-service.rc
 import /vendor/etc/init/microtrust.init_thh.rc
-
 import /vendor/etc/init/hw/init.aee.rc
 import /system_ext/etc/init/hw/init.aee.rc
 import /system/etc/init/update_verifier.rc
-import /vendor/etc/init/android.hardware.boot@1.1-service.rc
-import /vendor/etc/init/android.hardware.boot@1.1-service-lazy.rc
+import /vendor/etc/init/android.hardware.boot@1.2-service.rc
+import /vendor/etc/init/android.hardware.boot@1.2-service-lazy.rc
 import /vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
 
 #NFC
@@ -58,7 +57,7 @@ on early-init
     mkdir /linkerconfig/default 0755
 
     # Generate ld.config.txt for early executed processes
-    exec -- /system/bin/linkerconfig --target /linkerconfig/bootstrap
+    exec -- /system/bin/bootstrap/linkerconfig --target /linkerconfig/bootstrap
     chmod 644 /linkerconfig/bootstrap/ld.config.txt
     copy /linkerconfig/bootstrap/ld.config.txt /linkerconfig/default/ld.config.txt
     chmod 644 /linkerconfig/default/ld.config.txt
@@ -71,6 +70,9 @@ on early-init
     # become available. Note that this is executed as exec_start to ensure that
     # the libraries are available to the processes started after this statement.
     exec_start apexd-bootstrap
+
+    # Generate linker config based on apex mounted in bootstrap namespace
+    update_linker_config
 
     # force on usb
     # write /sys/module/musb_hdrc/parameters/musb_force_on 1
@@ -345,7 +347,7 @@ on fs
 #INTERNAL_START
     write /proc/bootprof "INIT:Mount_START"
     wait_for_prop hwservicemanager.ready "true"
-    start vendor.boot-hal-1-1
+    start vendor.boot-hal-1-2
     mount_all --early
     write /proc/bootprof "INIT:Mount_END"
 #INTERNAL_END
@@ -355,7 +357,7 @@ on post-fs
     start logd
     start light-default
     start system_suspend
-    start vendor.boot-hal-1-1
+    start vendor.boot-hal-1-2
     start merged_hal_service
     start capi-2-0
     start power-hal-1-0
@@ -427,6 +429,7 @@ on post-fs
 
 on late-fs
     wait_for_prop hwservicemanager.ready "true"
+    start keystore2
     start vendor.keymaster-3-0
     start vendor.keymaster-3-0-trustonic
     start vendor.keymaster-4-0
@@ -715,11 +718,6 @@ service adbd /apex/com.android.adbd/bin/adbd --root_seclabel=u:r:su:s0
 service thermal_manager /vendor/bin/thermal_manager
     user root
 	group system
-    oneshot
-
-service vendor.ccci_fsd /vendor/bin/ccci_fsd 0
-    user radio
-    group radio system
     oneshot
 
 service ccci_mdinit /vendor/bin/ccci_mdinit 0
