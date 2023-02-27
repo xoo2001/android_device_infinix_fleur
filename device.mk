@@ -124,12 +124,7 @@ PRODUCT_COPY_FILES += \
 LOCAL_KERNEL := device/xiaomi/fleur/prebuilt/kernel
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
-#PRODUCT_VENDOR_KERNEL_HEADERS := device/xiaomi/fleur/kernel-headers
 
-# Light
-PRODUCT_PACKAGES += \
-    android.hardware.lights-service.mediatek
-        
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
