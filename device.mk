@@ -20,7 +20,7 @@ $(call inherit-product, vendor/xiaomi/fleur/fleur-vendor.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio,$(TARGET_COPY_OUT_VENDOR)/etc)
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio,$(TARGET_COPY_OUT_VENDOR)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc)
 
 # A/B
 AB_OTA_UPDATER := true
