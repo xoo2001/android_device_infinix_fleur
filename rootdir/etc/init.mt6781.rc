@@ -44,6 +44,9 @@ on init
     # add this link for cust mount
     symlink /dev/block/platform/bootdevice /dev/block/bootdevice
 
+    #Bind Vendor overlay
+    mount none /vendor/lost+found /vendor/overlay bind
+
 #DT2W
     chown system system /proc/tp_gesture
     chmod 0660 /proc/tp_gesture
