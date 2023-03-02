@@ -34,11 +34,6 @@ AB_OTA_PARTITIONS := \
     vbmeta \
     vbmeta_system
 
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery \
-    android.hardware.boot@1.2-service
-
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -181,56 +176,16 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    factory_init.connectivity.rc \
-    factory_init.project.rc \
-    factory_init.rc \
-    init.aee.rc \
-    init.ago.rc \
-    init.connectivity.rc \
-    init.modem.rc \
     init.mt6781.rc \
-    init.mt6781.usb.rc \
-    init.project.rc \
-    init.sensor_1_0.rc \
-    init.stnfc.rc \
-    meta_init.connectivity.rc \
-    meta_init.modem.rc \
-    meta_init.project.rc \
-    meta_init.rc \
-    multi_init.rc \
-    fstab.emmc \
-    fstab.enableswap \
-    fstab.mt6781 \
-    ueventd.qcom.rc \
+    fstab.mt6781
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/rootdir/etc/fstab.emmc:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.emmc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.mt6781.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/hw/init.mt6781.rc
-
-# Radio
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.radio.config@1.0 \
-    android.hardware.radio@1.0 \
-    android.hardware.radio@1.1 \
-    android.hardware.radio@1.2 \
-    android.hardware.radio@1.3 \
-    android.hardware.radio@1.4 \
+    $(LOCAL_PATH)/rootdir/etc/init.mt6781.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/hw/init.mt6781.rc \
 
 # Symbols
 PRODUCT_PACKAGES += \
     libshim_vtservice \
     libshim_beanpod.vendor
-
-# Seccomp
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
-    $(LOCAL_PATH)/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
-    $(LOCAL_PATH)/seccomp/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy \
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -252,7 +207,7 @@ PRODUCT_BOOT_JARS += \
     mediatek-ims-common \
     mediatek-telecom-common \
     mediatek-telephony-base \
-    mediatek-telephony-common \
+    mediatek-telephony-common
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 31
