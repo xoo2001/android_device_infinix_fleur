@@ -18,6 +18,5 @@ runtime_resource_overlay {
     name: "CarrierConfigOverlayFleur",
     sdk_version: "current",
     resource_dirs: ["res"],
-    vendor: true,
-    aaptflags: ["--keep-raw-values"]
+    product_specific: true
 }
