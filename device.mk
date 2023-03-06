@@ -54,6 +54,10 @@ PRODUCT_PACKAGES_DEBUG += \
 # API level, the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 30
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
+
 # Dynamic partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -62,18 +66,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.fleur
-
+#Fingerprint
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
-
-# Health
-PRODUCT_PACKAGES += \
-    libsuspend \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -105,19 +100,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/public.libraries-trustonic.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-trustonic.txt
 
-# IDC
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-fpc.idc \
-    $(LOCAL_PATH)/idc/uinput-goodix.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/uinput-goodix.idc
 
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.fleur
 
 # Kernel
-LOCAL_KERNEL := device/xiaomi/fleur/prebuilt/kernel
 PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+    $(LOCAL_PATH)/prebuilts/dtb.img:dtb.img
 
 # Mtkperf
 PRODUCT_COPY_FILES += \
@@ -144,20 +134,6 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayFleur \
     SettingsOverlayFleur
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor \
-    android.hardware.power.stats@1.0-service.mock
-
-# Product characteristics
-PRODUCT_CHARACTERISTICS := default
-
-# RcsService
-PRODUCT_PACKAGES += \
-    com.android.ims.rcsmanager \
-    RcsService \
-    PresencePolling
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.mt6781.rc \
@@ -177,7 +153,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
 # Properties
--include $(DEVICE_PATH)/system_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Telephony
@@ -189,18 +164,3 @@ PRODUCT_BOOT_JARS += \
     mediatek-telecom-common \
     mediatek-telephony-base \
     mediatek-telephony-common
-
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 31
-
-# Extra VNDK Versions
-PRODUCT_EXTRA_VNDK_VERSIONS := 31
-
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@2.0.vendor
-
-# Wi-Fi
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay
