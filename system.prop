@@ -1,89 +1,86 @@
-Build.BRAND=MTK
-dalvik.vm.dexopt.secondary=true
-debug.sf.disable_backpressure=1
-external_storage.cross_user.enabled=1
-keyguard.no_require_sim=true
-mediatek.wlan.ctia=0
-net.bt.name=Android
-persist.audio.button_jack.profile=volume
-persist.audio.button_jack.switch=0
-persist.binder.check.enable=true
-persist.binder.check.size=200
-persist.displayfeature.dc_backlight.enable=false
-persist.enable_task_snapshots=false
-persist.power.useautobrightadj=true
-persist.radio.apm_sim_not_pwdn=1
-persist.sys.minfree_6g=73728,92160,110592,340000,1282868,1677312
-persist.sys.minfree_8g=73728,92160,110592,340000,1677312,2064384
-persist.sys.minfree_def=73728,92160,110592,340000,510000,645120
-persist.sys.oom_crash_on_watchdog=true
-persist.sys.periodic.enable=true
-persist.sys.periodic.fgtrim=false
-persist.sys.periodic.startprocess.enable=false
-persist.sys.slab.threshold=256000,358400,460800,665600,819200
-persist.sys.watchdog_enhanced=true
-persist.vendor.disable_idle_fps.threshold=534
-persist.vm.stackdump.threshold=0
-qemu.hw.mainkeys=0
-ro.all_modes.colorpick_adjust=true
+# Audio
 ro.audio.silent=0
+ro.config.vc_call_vol_steps=9
+
+# Bluetooth
 ro.bluetooth.emb_wp_mode=false
 ro.bluetooth.wipower=false
-ro.camera.sound.forced=0
-ro.colorpick_adjust=true
-ro.displayfeature.histogram.enable=false
-ro.hardware.fp.sideCap=true
-ro.hardware.wlan.dbs = 0
-ro.iorapd.enable=false
-ro.kernel.zio=38,108,105,16
-ro.malloc.impl=jemalloc
-ro.mediatek.wlan.p2p=1
-ro.mediatek.wlan.wsc=1
-ro.mi.development=false
-ro.mtk_perf_fast_start_win=1
-ro.mtk_perf_response_time=1
-ro.mtk_perf_simple_start_win=1
-ro.opengles.version=196610
-ro.product.mod_device=fleur_in_global
-ro.product.property_source_order=odm,vendor,product,system
-ro.product.system.marketname=
-ro.rom.zone=2
-ro.sys.usb.bicr=no
-ro.sys.usb.charging.only=yes
-ro.sys.usb.mtp.whql.enable=0
-ro.sys.usb.storage.type=mtp
-ro.vendor.audio.sos=true
-ro.vendor.audio.soundfx.type=mi
-ro.vendor.audio.soundfx.usb=true
-ro.vendor.audio.voice.change.support=true
-ro.vendor.audio.voice.volume.boost=manual
-ro.vendor.build.software.version=Android11_130
-ro.vendor.cabc.enable=false
-ro.vendor.display.type=oled
-ro.vendor.fod.dimlayer.enable=false
-ro.vendor.fps.switch.default=true
-ro.vendor.gcp.enable=false
-ro.vendor.xiaomi.bl.poll=true
-ro.whitepoint_calibration_enable=false
-ro.wifi.channels=
-ro.xiaomi.bl.poll=true
-ro.zygote.preload.enable=0
-setupwizard.feature.baseline_setupwizard_enabled=true
-sys.displayfeature.entry.enable=true
-sys.displayfeature.hbm.enable=true
-sys.displayfeature_hidl=true
-sys.ipo.disable=1
-sys.ipo.pwrdncap=2
-vendor.audiohal.telephonytx.type=2
-vendor.rild.libargs=-d /dev/ttyC0
-vendor.rild.libpath=mtk-ril.so
-wifi.direct.interface=p2p0
-wifi.interface=wlan0
-wifi.tethering.interface=ap0
 
-# VoLTE
-persist.dbg.ims_volte_enable=1
+# Brand
+Build.BRAND=MTK
+
+# Camera
+ro.camera.sound.forced=0
+
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+
+# Display
+persist.vendor.dc_backlight.enable=false
+ro.display.type=oled
+vendor.hbm.enable=true
+
+# Fingerprint
+ro.hardware.fp.sideCap=true
+
+# GPU
+ro.opengles.version=196610
+
+# IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 persist.vendor.vilte_support=0
+
+# Kernel
+ro.kernel.zio=38,108,105,16
+sys.ipo.disable=1
+sys.ipo.pwrdncap=2
+ro.iorapd.enable=false
+
+# Logging
+persist.sys.mdlog_dumpback=2
+
+# Perf
+ro.mtk_perf_simple_start_win=1
+ro.mtk_perf_fast_start_win=1
+ro.mtk_perf_response_time=1
+
+# Memory Management
+ro.sys.fw.bservice_enable=true
+ro.sys.fw.bservice_limit=5
+ro.sys.fw.bservice_age=5000
+ro.am.reschedule_service=true
+ro.config.fha_enable=true
+ro.sys.fw.bg_apps_limit=32
+ro.config.dha_cached_max=16
+ro.config.dha_empty_max=42
+ro.config.dha_empty_init=32
+ro.config.dha_lmk_scale=0.545
+ro.config.dha_th_rate=2.3
+ro.config.sdha_apps_bg_max=64
+ro.config.sdha_apps_bg_min=8
+
+# RIL
+vendor.rild.libpath=mtk-ril.so
+vendor.rild.libargs=-d /dev/ttyC0
+
+# USB
+ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp
+ro.sys.usb.bicr=no
+ro.sys.usb.charging.only=yes
+persist.vendor.otg_control=true
+
+# WiFi
+wifi.interface=wlan0
+ro.mediatek.wlan.wsc=1
+ro.mediatek.wlan.p2p=1
+mediatek.wlan.ctia=0
+wifi.tethering.interface=ap0
+wifi.direct.interface=p2p0
+
+# ZRAM
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=1440
+ro.zram.periodic_wb_delay_hours=24
