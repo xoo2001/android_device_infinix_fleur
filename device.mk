@@ -18,10 +18,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/fleur/fleur-vendor.mk)
 
-# Audio
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc)
-
 # A/B
 AB_OTA_UPDATER := true
 
@@ -53,6 +49,10 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # API level, the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 30
+
+# Audio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
@@ -116,7 +116,7 @@ PRODUCT_COPY_FILES += \
 # MTK IMS Overlays
 PRODUCT_PACKAGES += \
     mtk-ims \
-    mtk-ims-telephony \
+    mtk-ims-telephony
 
 # MtkInCallService
 PRODUCT_PACKAGES += \
@@ -140,13 +140,16 @@ PRODUCT_PACKAGES += \
     fstab.mt6781
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.mt6781.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/hw/init.mt6781.rc \
+    $(LOCAL_PATH)/rootdir/etc/init.mt6781.rc:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/init/hw/init.mt6781.rc
+
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Symbols
 PRODUCT_PACKAGES += \
     libshim_vtservice \
     libshim_beanpod.vendor
-
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
