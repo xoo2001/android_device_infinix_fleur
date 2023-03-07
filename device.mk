@@ -75,6 +75,12 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0_system
 
+# Health
+PRODUCT_PACKAGES += \
+    libsuspend \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
+
 # ImsInit hack
 PRODUCT_PACKAGES += \
     ImsInit
