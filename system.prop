@@ -27,6 +27,7 @@ ro.hardware.fp.sideCap=true
 ro.opengles.version=196610
 
 # IMS
+persist.dbg.ims_volte_enable=1
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
@@ -46,20 +47,9 @@ ro.mtk_perf_simple_start_win=1
 ro.mtk_perf_fast_start_win=1
 ro.mtk_perf_response_time=1
 
-# Memory Management
-ro.sys.fw.bservice_enable=true
-ro.sys.fw.bservice_limit=5
-ro.sys.fw.bservice_age=5000
-ro.am.reschedule_service=true
-ro.config.fha_enable=true
-ro.sys.fw.bg_apps_limit=32
-ro.config.dha_cached_max=16
-ro.config.dha_empty_max=42
-ro.config.dha_empty_init=32
-ro.config.dha_lmk_scale=0.545
-ro.config.dha_th_rate=2.3
-ro.config.sdha_apps_bg_max=64
-ro.config.sdha_apps_bg_min=8
+# Product
+ro.product.mod_device=fleur_global
+ro.product.property_source_order=odm,vendor,product,system
 
 # RIL
 vendor.rild.libpath=mtk-ril.so
