@@ -39,8 +39,13 @@ sys.ipo.disable=1
 sys.ipo.pwrdncap=2
 ro.iorapd.enable=false
 
-# Logging
-persist.sys.mdlog_dumpback=2
+# Log
+persist.log.tag.GED=S
+persist.log.tag.hwcomposer=S
+persist.log.tag.libnfc_nci=S
+persist.log.tag.libPowerHal=S
+persist.log.tag.mTEE=S
+persist.log.tag.mtkpower@impl=S
 
 # Memory Management
 ro.sys.fw.bservice_enable=true
@@ -56,6 +61,10 @@ ro.config.dha_lmk_scale=0.545
 ro.config.dha_th_rate=2.3
 ro.config.sdha_apps_bg_max=64
 ro.config.sdha_apps_bg_min=8
+
+# Netflix
+ro.netflix.channel=004ee050-1a17-11e9-bb61-6f1da27fb55b
+ro.netflix.signup=1
 
 # Perf
 ro.mtk_perf_simple_start_win=1
