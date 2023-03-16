@@ -46,6 +46,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+    
+# API level, the device has been commercially launched on
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Audio
 PRODUCT_COPY_FILES += \
