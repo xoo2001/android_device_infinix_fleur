@@ -113,10 +113,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/dtb.img:dtb.img
 
-# Mtkperf
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/public.libraries.txt
-
 # MTK In-call service
 PRODUCT_PACKAGES += \
     MtkInCallService
