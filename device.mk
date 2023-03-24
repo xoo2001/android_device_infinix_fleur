@@ -58,6 +58,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
+# Bootctrl
+PRODUCT_PACKAGES += \
+    bootctrl.default \
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2.recovery \
+    android.hardware.boot@1.2-service
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 31
 PRODUCT_EXTRA_VNDK_VERSIONS := 31
