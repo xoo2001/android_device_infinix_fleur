@@ -1,6 +1,3 @@
-# Biometrics
-/system/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.fleur u:object_r:hal_fingerprint_fleur_exec:s0
-
 # Executables
 /system/bin/chargeonlymode                    u:object_r:charger_exec:s0
 
