@@ -3,4 +3,3 @@
 ### Known issues
 - Power-off Charging
 - InCall Loudspeaker is always on
-- No system audio
