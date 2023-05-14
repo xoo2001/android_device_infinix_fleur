@@ -8,11 +8,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from fleur device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-PRODUCT_BRAND := xiaomi
+PRODUCT_BRAND := Redmi
 PRODUCT_DEVICE := fleur
 PRODUCT_NAME := lineage_fleur
-PRODUCT_MODEL := fleur
-PRODUCT_MANUFACTURER := xiaomi
+PRODUCT_MODEL := Redmi Note 11S 4G
+PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
