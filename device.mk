@@ -52,7 +52,10 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Audio Config
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_configuration.xml
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/configs/,$(TARGET_COPY_OUT_SYSTEM)/etc/)
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/audio/blobs/audio.primary.mt6833.so:$(TARGET_COPY_OUT_SYSTEM)/lib/hw/audio.primary.mt6781.so
 
 #APN config
 PRODUCT_COPY_FILES += \
