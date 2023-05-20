@@ -42,3 +42,6 @@ bin/kpoc_charger
 etc/init/kpoc_charger.rc
 lib/libsysenv_system.so
 lib64/libsysenv_system.so
+
+# Audio primary hardware module, evergreen-user 12 SP1A.210812.016 V13.0.4.0.SGBMIXM release-keys
+-vendor/lib/hw/audio.primary.mt6785.so
