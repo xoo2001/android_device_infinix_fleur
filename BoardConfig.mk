@@ -36,9 +36,6 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 # Display
 TARGET_SCREEN_DENSITY := 393
 
-# Firmware
--include vendor/xiaomi/fleur-firmware/BoardConfigVendor.mk
-
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x40078000
