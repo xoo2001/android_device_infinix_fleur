@@ -57,7 +57,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/blobs/audio.primary.mt6833.so:$(TARGET_COPY_OUT_SYSTEM)/lib/hw/audio.primary.mt6781.so
 
-#APN config
+# APN config
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
@@ -68,13 +68,10 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2.recovery \
     android.hardware.boot@1.2-service
 
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 31
-PRODUCT_EXTRA_VNDK_VERSIONS := 31
-
-# Dynamic partitions
-PRODUCT_BUILD_SUPER_PARTITION := false
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth@1.1.vendor
 
 # DT2W
 PRODUCT_PACKAGES += \
@@ -84,22 +81,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-#Fingerprint
+# Fingerprint
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
-
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.base@1.0_system \
-    android.hidl.manager@1.0_system \
-    libhidltransport \
-    libhwbinder 
-
-# Health
-PRODUCT_PACKAGES += \
-    libsuspend \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
 
 # ImsInit hack
 PRODUCT_PACKAGES += \
@@ -111,26 +95,38 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService \
     ImsServiceBase
-    
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
 
-# Lights
+# Init
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.fleur
+    init.mt6781.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.mt6781.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.mt6781.rc
+
+# Health
+PRODUCT_PACKAGES += \
+    libsuspend \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
+
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0_system \
+    android.hidl.manager@1.0_system \
+    libhidltransport \
+    libhwbinder 
 
 # Kernel
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/dtb.img:dtb.img
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.fleur
+
 # MTK In-call service
 PRODUCT_PACKAGES += \
     MtkInCallService
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1.vendor
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -145,27 +141,22 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayFleur \
     SettingsOverlayFleur
 
-# Ramdisk
-PRODUCT_PACKAGES += \
-    init.mt6781.rc
-
+# Permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.mt6781.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.mt6781.rc
-
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
+ 
+# Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6781:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6781
-
-# Symbols
-PRODUCT_PACKAGES += \
-    libshim_vtservice \
-    libshim_beanpod.vendor
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
-# Properties
-PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+# Symbols
+PRODUCT_PACKAGES += \
+    libshim_vtservice \
+    libshim_beanpod.vendor
 
 # Telephony
 PRODUCT_BOOT_JARS += \
@@ -176,3 +167,7 @@ PRODUCT_BOOT_JARS += \
     mediatek-telecom-common \
     mediatek-telephony-base \
     mediatek-telephony-common
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 31
+PRODUCT_EXTRA_VNDK_VERSIONS := 31
