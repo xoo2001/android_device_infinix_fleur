@@ -70,6 +70,7 @@ ro.netflix.signup=1
 ro.mtk_perf_simple_start_win=1
 ro.mtk_perf_fast_start_win=1
 ro.mtk_perf_response_time=1
+ro.vendor.perf.scroll_opt=true
 
 # Product
 ro.product.mod_device=fleur_global
