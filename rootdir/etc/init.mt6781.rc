@@ -63,10 +63,6 @@ service aee_aedv64 /system/bin/true
 on property:persist.vendor.radio.port_index=""
     setprop sys.usb.config adb
 
-on property:sys.boot_completed=1
-    # force disable hw overlays to be true
-    exec - root -- /system/bin/sh -c "service call SurfaceFlinger 1008 i32 1"
-
 on property:persist.sys.fleur.dt2w=0
     write /proc/tp_gesture 0
 
