@@ -95,13 +95,13 @@ vendor.rild.libargs=-d /dev/ttyC0
 
 # Surfaceflinger
 debug.sf.enable_gl_backpressure=1
-debug.sf.late.sf.duration=29100000
-debug.sf.late.app.duration=21500000
-debug.sf.early.sf.duration=29100000
-debug.sf.early.app.duration=21500000
-debug.sf.earlyGl.sf.duration=29100000
-debug.sf.earlyGl.app.duration=21500000
-debug.sf.hwc.min.duration=18500000
+debug.sf.late.sf.duration=30000000
+debug.sf.late.app.duration=24000000
+debug.sf.early.sf.duration=30000000
+debug.sf.early.app.duration=24000000
+debug.sf.earlyGl.sf.duration=30000000
+debug.sf.earlyGl.app.duration=24000000
+debug.sf.hwc.min.duration=23000000
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.latch_unsignaled=0
 debug.sf.disable_client_composition_cache=1
