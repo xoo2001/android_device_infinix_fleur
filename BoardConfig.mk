@@ -57,6 +57,9 @@ TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/Image.gz
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072                   # 2048      * 64   (pagesize)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864         # 65536     * 1024 (sdc36)
