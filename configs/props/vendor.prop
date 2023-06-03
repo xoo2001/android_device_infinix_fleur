@@ -1,7 +1,11 @@
-debug.hwui.skia_atrace_enabled=false
+# vendor prop only for refernce , changes are merged in prebuilt vendor image.
+
+# Graphics
+debug.sf.hw=1
 
 # HWUI
 ro.hwui.render_ahead=20
+debug.hwui.skia_atrace_enabled=false
 
 # Zygote
 zygote.critical_window.minute=10
