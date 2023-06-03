@@ -53,14 +53,6 @@ sys.ipo.disable=1
 sys.ipo.pwrdncap=2
 ro.iorapd.enable=false
 
-# Log
-persist.log.tag.GED=S
-persist.log.tag.hwcomposer=S
-persist.log.tag.libnfc_nci=S
-persist.log.tag.libPowerHal=S
-persist.log.tag.mTEE=S
-persist.log.tag.mtkpower@impl=S
-
 # Memory Management
 ro.sys.fw.bservice_enable=true
 ro.sys.fw.bservice_limit=5
