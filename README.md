@@ -2,4 +2,3 @@
 
 ### Known issues
 - Bluetooth audio (calls work, media doesn't)
-- Always on display and ambient display
