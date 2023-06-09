@@ -143,7 +143,8 @@ PRODUCT_PACKAGES += \
     TetheringOverlayFleur \
     WifiOverlayFleur \
     SystemUIOverlayFleur \
-    SettingsOverlayFleur
+    SettingsOverlayFleur \
+    TargetWifiOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
