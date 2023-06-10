@@ -64,6 +64,10 @@
         <item>com.tencent.mm</item>
     </string-array>
 
+        <!-- List of comma separated package names for which we the system will not show crash like
+         tts, etc. dialogs. -->
+    <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
+
     <!-- An array of arrays of side fingerprint sensor properties relative to each display.
          Note: this value is temporary and is expected to be queried directly
          from the HAL in the future. -->
