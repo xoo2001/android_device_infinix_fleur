@@ -1,1 +1,4 @@
 debug.hwui.skia_atrace_enabled=false
+
+# HWUI
+ro.hwui.render_ahead=20
