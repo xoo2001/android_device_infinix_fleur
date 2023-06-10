@@ -167,6 +167,9 @@ PRODUCT_PACKAGES += \
     libshim_vtservice \
     libshim_beanpod.vendor
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
 # Telephony
 PRODUCT_BOOT_JARS += \
     mediatek-common \
