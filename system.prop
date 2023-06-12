@@ -104,6 +104,7 @@ debug.sf.predict_hwc_composition_strategy=0
 ro.surface_flinger.uclamp.min=130
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 debug.sf.enable_egl_image_tracker=1
+ro.hwui.render_ahead=30
 
 # SkialGL
 debug.hwui.renderer=skiagl
