@@ -158,7 +158,10 @@ PRODUCT_COPY_FILES += \
 # Parts
 PRODUCT_PACKAGES += \
     XiaomiParts
- 
+# Props
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/props/vendor.prop:$(TARGET_COPY_OUT_SYSTEM)/tmp/vendor.prop
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6781:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6781
