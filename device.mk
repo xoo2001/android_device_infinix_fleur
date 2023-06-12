@@ -144,7 +144,8 @@ PRODUCT_PACKAGES += \
     WifiOverlayFleur \
     SystemUIOverlayFleur \
     SettingsOverlayFleur \
-    TargetWifiOverlay
+    TargetWifiOverlay \
+    SimpleDeviceConfigOverlayfleur
 
 # Permissions
 PRODUCT_COPY_FILES += \
