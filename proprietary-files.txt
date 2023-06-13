@@ -36,6 +36,12 @@ lib64/libldacBT_abr.so
 lib/libldacBT_enc.so
 lib64/libldacBT_enc.so
 
+# Kernel Power Off Charging (KPOC)
+bin/kpoc_charger
+etc/init/kpoc_charger.rc
+lib/libsysenv_system.so
+lib64/libsysenv_system.so
+
 # Patched IMSService APK, from fleur-user 12 SP1A.210812.016 V13.0.9.0.SKEMIXM release-keys
 # https://github.com/Nem1xx/ImsService
 -system/priv-app/ImsService/ImsService.apk
