@@ -77,6 +77,9 @@ sys.ipo.disable=1
 sys.ipo.pwrdncap=2
 ro.iorapd.enable=false
 
+#Logs
+persist.log.tag.OpenGLRenderer=S
+
 # Memory Management
 ro.sys.fw.bservice_enable=true
 ro.sys.fw.bservice_limit=5
