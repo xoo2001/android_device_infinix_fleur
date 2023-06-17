@@ -19,10 +19,6 @@
     <string name="config_batteryDesignCapacity">/sys/class/power_supply/bms/charge_full_design</string>
     <string name="config_batteryChargeCycles">/sys/class/power_supply/bms/cycle_count</string>
 
-    <!-- Whether to show min/max refresh rate in display settings -->
-    <bool name="config_show_refresh_rate_controls">true</bool>
-    <bool name="config_supports_dynamic_refresh_rate_controls">true</bool>
-
     <!-- The number of vibration intensity levels supported by the device.
          Note that this should correspond to the ability to vary the vibration amplitude, with
          enough dynamic range to have at least as many distinct intensity levels as defined here.
