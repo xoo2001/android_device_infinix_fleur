@@ -20,6 +20,8 @@ bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 ro.vendor.mtk.bt_sap_enable=true
+persist.bluetooth.a2dp_offload.disabled=true
+ro.bluetooth.a2dp_offload.supported=false
 
 # Brand
 Build.BRAND=MTK
