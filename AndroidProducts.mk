@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_fleur.mk
+    $(LOCAL_DIR)/derp_fleur.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_fleur-user \
-    aosp_fleur-userdebug \
-    aosp_fleur-eng
+    derp_fleur-user \
+    derp_fleur-userdebug \
+    derp_fleur-eng
