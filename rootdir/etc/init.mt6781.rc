@@ -4,6 +4,7 @@ on init
     mount none /system/etc/audio_device.xml /vendor/etc/audio_device.xml bind
     mount none /system/etc/audio_policy_configuration.xml /vendor/etc/audio_policy_configuration.xml bind
     mount none /system/lib/hw/audio.primary.mt6781.so /vendor/lib/hw/audio.primary.mt6781.so bind
+    mount none /system/lib64/libmtkcam_featurepolicy.so /vendor/lib64/libmtkcam_featurepolicy.so bind
     mount none /vendor/lost+found /vendor/overlay bind
     mount none /system/tmp/vendor.prop /vendor/build.prop bind
 
