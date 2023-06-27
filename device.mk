@@ -59,7 +59,7 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/audio/,$(TARGET_COPY_OUT_SYSTEM)/etc/)
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/blobs/audio.primary.mt6833.so:$(TARGET_COPY_OUT_SYSTEM)/lib/hw/audio.primary.mt6781.so
+    $(DEVICE_PATH)/configs/blobs/audio.primary.mt6853.so:$(TARGET_COPY_OUT_SYSTEM)/lib/hw/audio.primary.mt6781.so
 
 # APN config
 PRODUCT_COPY_FILES += \
