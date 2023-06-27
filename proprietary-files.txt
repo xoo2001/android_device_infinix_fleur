@@ -43,6 +43,5 @@ bin/charger:bin/chargeonlymode
 # https://github.com/Nem1xx/ImsService
 -system/priv-app/ImsService/ImsService.apk
 
-# Audio primary hardware module, evergreen-user 12 SP1A.210812.016 V13.0.4.0.SGBMIXM release-keys
--vendor/lib/hw/audio.primary.mt6785.so
-
+# Audio primary hardware module, cannong-user 12 SP1A.210812.016 V13.0.3.0.SJEMIXM release-keys
+# vendor/lib/hw/audio.primary.mt6853.so
