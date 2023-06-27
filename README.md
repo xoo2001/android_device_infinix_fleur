@@ -24,4 +24,4 @@ It was released in February 2022.
 |                 Display | 1080 x 2400 pixels, 20:9 ratio, 6.43 inches, 60/90 Hz, AMOLED      |
 |                  Camera | 108MP/64MP (Primary), 8MP (Ultra-wide), 2MP (Macro)                |
 
-![Redmi Note 11S](https://m.media-amazon.com/images/I/715iHuJXgVL._SX679_.jpg)
+![Redmi Note 11S](https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1678377190.61589211!800x800!85.png)
