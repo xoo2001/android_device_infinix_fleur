@@ -81,6 +81,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration.xml \
     $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration_7_0.xml
 
+# Camera
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/blobs/libmtkcam_featurepolicy.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtkcam_featurepolicy.so
+
 # DT2W
 PRODUCT_PACKAGES += \
     DT2W-Service-Fleur
