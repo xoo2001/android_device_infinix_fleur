@@ -1,0 +1,5 @@
+type sysfs_led, fs_type, sysfs_type;
+
+type hal_light_default, fs_type, sysfs_type;
+
+type hal_light_default_exec, fs_type, sysfs_type;
