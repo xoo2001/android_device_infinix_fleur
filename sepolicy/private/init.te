@@ -7,3 +7,11 @@ allow init vendor_configs_file:file mounton;
 
 # Allow init to mount vendor overlay
 allow init vendor_overlay_file:dir mounton;
+
+allow init vendor_default_prop:property_service {set};
+
+allow init default_prop:property_service {set};
+
+set_prop(mtk_hal_audio, vendor_default_prop)
+
+set_prop(mtk_hal_bluetooth, default_prop)
