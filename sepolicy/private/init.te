@@ -1,5 +1,6 @@
 # Allow init to bind mount over vendor file
 allow init vendor_file:file mounton;
+allow init vendor_file:file { execute };
 
 # Allow init to mount vendor configs
 allow init vendor_configs_file:dir mounton;
@@ -7,3 +8,22 @@ allow init vendor_configs_file:file mounton;
 
 # Allow init to mount vendor overlay
 allow init vendor_overlay_file:dir mounton;
+allow init vendor_overlay_file:file mounton;
+
+# Allow init to execute system files
+allow init unlabeled:file { execute execute_no_trans };
+allow init system_file:file { execute_no_trans };
+
+# Allow init to set governor and frequency
+allow init sysfs_devfreq_file:file rw_file_perms;
+
+# Allow mtk_hal_audio to set props
+allow init vendor_default_prop:property_service {set};
+
+allow init default_prop:property_service {set};
+
+set_prop(mtk_hal_audio, vendor_default_prop)
+
+set_prop(mtk_hal_bluetooth, default_prop)
+
+

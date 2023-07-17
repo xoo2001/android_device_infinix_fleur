@@ -1,0 +1,7 @@
+allow system_app sysfs_led:dir search;
+
+allow system_app sysfs_led:file rw_file_perms;
+
+allow hal_light_default sysfs_led:dir { search };
+
+allow hal_light_default sysfs_led:file { write read open getattr };

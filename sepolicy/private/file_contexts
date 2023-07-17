@@ -1,3 +1,6 @@
+# Brightness
+/sys/devices/platform/disp_leds/leds(/.*)?                                             u:object_r:sysfs_led:s0
+
 # Executables
 /system/bin/chargeonlymode                    u:object_r:charger_exec:s0
 
@@ -12,3 +15,6 @@
 
 # Sysbta
 /system/bin/hw/android\.hardware\.bluetooth\.audio-service-system    u:object_r:hal_audio_sysbta_exec:s0
+
+# VoLTE
+/system/bin/vtservice           u:object_r:vtservice_exec:s0
