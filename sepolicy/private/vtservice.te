@@ -17,3 +17,5 @@ allow vtservice radio_service:service_manager find;
 allow vtservice vtservice_service:service_manager add;
 
 get_prop(vtservice, hwservicemanager_prop)
+get_prop(vtservice, vendor_default_prop)
+
