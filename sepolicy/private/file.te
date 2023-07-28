@@ -3,3 +3,11 @@ type sysfs_led, fs_type, sysfs_type;
 type hal_light_default, fs_type, sysfs_type;
 
 type hal_light_default_exec, fs_type, sysfs_type;
+
+type mtk_hal_audio, domain;
+
+type rild, domain;
+
+type vendor_mtk_call_drop_prop, domain;
+
+type rild_exec, exec_type, file_type;
