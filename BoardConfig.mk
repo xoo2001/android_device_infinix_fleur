@@ -98,6 +98,7 @@ BOARD_PREBUILT_VENDORIMAGE := $(DEVICE_PATH)/prebuilts/vendor.img
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6781
+BOARD_HAVE_MTK_FM := true
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop

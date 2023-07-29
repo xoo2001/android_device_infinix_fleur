@@ -104,6 +104,7 @@ PRODUCT_COPY_FILES += \
 # FMRadio
 PRODUCT_PACKAGES += \
     libfmjni \
+    FMRadio
 
 # ImsInit hack
 PRODUCT_PACKAGES += \
