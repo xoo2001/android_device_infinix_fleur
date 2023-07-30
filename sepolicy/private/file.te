@@ -3,7 +3,7 @@ type sysfs_led, fs_type, sysfs_type;
 type sysfs_devfreq_file, fs_type, sysfs_type;
 
 # mtk_hal_audio
-type mtk_hal_audio;
+type mtk_hal_audio, domain;
 type mtk_hal_bluetooth;
 
 # light hal
@@ -16,3 +16,11 @@ type bt_firmware_file, file_type;
 type firmware_file, file_type;
 type persist_file, file_type;
 type persist_data_file, file_type;
+
+# rild
+type rild, domain;
+type rild_exec, exec_type, file_type;
+
+# vendor_mtk_call_drop_prop
+type vendor_mtk_call_drop_prop, domain;
+
