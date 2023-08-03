@@ -32,6 +32,7 @@ type vendor_sysfs_charger_supply, fs_type, sysfs_type;
 type vendor_sysfs_bms_supply, fs_type, sysfs_type;
 type vendor_sysfs_parallel_supply, fs_type, sysfs_type;
 type vendor_sysfs_main_supply, fs_type, sysfs_type;
+type hal_health_default, domain;
 
 # domains
 type nvram_daemon, domain;
