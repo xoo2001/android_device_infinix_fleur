@@ -54,13 +54,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # API level, the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 30
 
-# Audio Config
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/audio/,$(TARGET_COPY_OUT_SYSTEM)/etc/)
-
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/blobs/audio.primary.mt6853.so:$(TARGET_COPY_OUT_SYSTEM)/lib/hw/audio.primary.mt6781.so
-
 # APN config
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/apn/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
@@ -80,10 +73,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration.xml \
     $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration_7_0.xml
-
-# Camera
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/blobs/libmtkcam_featurepolicy.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmtkcam_featurepolicy.so
 
 # DT2W
 PRODUCT_PACKAGES += \
@@ -189,6 +178,10 @@ PRODUCT_BOOT_JARS += \
     mediatek-telecom-common \
     mediatek-telephony-base \
     mediatek-telephony-common
+
+# Vendor overlay
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/vendor_overlay/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/)
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 31
