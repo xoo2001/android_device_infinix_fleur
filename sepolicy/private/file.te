@@ -33,6 +33,7 @@ type vendor_sysfs_bms_supply, fs_type, sysfs_type;
 type vendor_sysfs_parallel_supply, fs_type, sysfs_type;
 type vendor_sysfs_main_supply, fs_type, sysfs_type;
 type hal_health_default, domain;
+type hal_health_default_exec, exec_type, vendor_file_type, file_type;
 
 # domains
 type nvram_daemon, domain;
@@ -50,9 +51,8 @@ type fuelgauged_nvram, domain;
 type sysfs_battery_supply, domain;
 type vendor_mtk_atm_mdmode_prop, domain;
 
-# hals
+# fingerprint
 type hal_fingerprint_default_exec, exec_type, vendor_file_type, file_type;
-type hal_health_default_exec, exec_type, vendor_file_type, file_type;
 
 # mediacodec
 type mediacodec_exec, exec_type, vendor_file_type, file_type;
