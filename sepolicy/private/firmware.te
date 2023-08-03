@@ -1,0 +1,20 @@
+allow fsck block_device:blk_file { read };
+allow fsck block_device:blk_file { read write };
+allow init proc:file { write };
+allow nvram_daemon proc_cmdline:file { read };
+allow nvram_daemon sysfs_dt_firmware_android:dir { search };
+allow hal_mtdservice_default file_contexts_file:file { read };
+allow hal_mtdservice_default camera_persist_file:dir { getattr };
+get_prop(hal_displayfeature_xiaomi_default, default_prop)
+allow hal_mtdservice_default self:capability { sys_admin };
+allow hal_mtdservice_default self:capability { dac_read_search };
+allow hal_mtdservice_default self:capability { dac_override };
+allow nvram_daemon persist_data_file:dir { search };
+allow mnld sysfs_led:dir { search };
+allow ccci_mdinit sysfs_boot_mode:file { read };
+set_prop(wlan_assistant, radio_prop)
+allow init hal_fingerprint_default:process { ptrace };
+get_prop(ccci_mdinit, init_service_status_private_prop)
+get_prop(bip, net_dns_prop)
+set_prop(gsm0710muxd, ctl_stop_prop)
+allow fuelgauged_nvram sysfs_dt_firmware_android:dir { search };
