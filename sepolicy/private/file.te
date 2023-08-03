@@ -38,7 +38,6 @@ type nvram_daemon, domain;
 type hal_mtdservice_default, domain;
 type hal_displayfeature_xiaomi_default, domain;
 type camera_persist_file, domain;
-type persist_data_file, domain;
 type mnld, domain;
 type ccci_mdinit, domain;
 type sysfs_boot_mode, domain;
