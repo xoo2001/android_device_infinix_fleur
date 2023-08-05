@@ -32,13 +32,14 @@ type vendor_sysfs_charger_supply, fs_type, sysfs_type;
 type vendor_sysfs_bms_supply, fs_type, sysfs_type;
 type vendor_sysfs_parallel_supply, fs_type, sysfs_type;
 type vendor_sysfs_main_supply, fs_type, sysfs_type;
+type hal_health_default, domain;
+type hal_health_default_exec, exec_type, vendor_file_type, file_type;
 
 # domains
 type nvram_daemon, domain;
 type hal_mtdservice_default, domain;
 type hal_displayfeature_xiaomi_default, domain;
 type camera_persist_file, domain;
-type persist_data_file, domain;
 type mnld, domain;
 type ccci_mdinit, domain;
 type sysfs_boot_mode, domain;
@@ -50,9 +51,8 @@ type fuelgauged_nvram, domain;
 type sysfs_battery_supply, domain;
 type vendor_mtk_atm_mdmode_prop, domain;
 
-# hals
+# fingerprint
 type hal_fingerprint_default_exec, exec_type, vendor_file_type, file_type;
-type hal_health_default_exec, exec_type, vendor_file_type, file_type;
 
 # mediacodec
 type mediacodec_exec, exec_type, vendor_file_type, file_type;
