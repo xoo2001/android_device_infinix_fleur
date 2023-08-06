@@ -11,3 +11,5 @@ allow init vendor_overlay_file:dir mounton;
 allow init sysfs_devices_block:file { write };
 allow init sysfs_led:file { setattr };
 allow init socket_device:sock_file { create };
+allow init proc:file { write };
+allow init hal_fingerprint_default:process { ptrace };

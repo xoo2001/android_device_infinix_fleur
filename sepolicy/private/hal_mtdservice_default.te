@@ -1,0 +1,5 @@
+allow hal_mtdservice_default file_contexts_file:file { read };
+allow hal_mtdservice_default camera_persist_file:dir { getattr };
+allow hal_mtdservice_default self:capability { sys_admin };
+allow hal_mtdservice_default self:capability { dac_read_search };
+allow hal_mtdservice_default self:capability { dac_override };

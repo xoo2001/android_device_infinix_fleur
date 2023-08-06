@@ -11,3 +11,39 @@ type rild, domain;
 type vendor_mtk_call_drop_prop, domain;
 
 type rild_exec, exec_type, file_type;
+
+type nvram_daemon, domain;
+
+type hal_mtdservice_default, domain;
+
+type hal_displayfeature_xiaomi_default, domain;
+
+type camera_persist_file, domain;
+
+type persist_data_file, domain;
+
+type mnld, domain;
+
+type ccci_mdinit, domain;
+
+type sysfs_boot_mode, domain;
+
+type wlan_assistant, domain;
+
+type hal_fingerprint_default, domain;
+
+type bip, domain;
+
+type gsm0710muxd, domain;
+
+type fuelgauged_nvram, domain;
+
+type sysfs_battery_supply, domain;
+
+type vendor_mtk_atm_mdmode_prop, domain;
+
+type hal_fingerprint_default_exec, exec_type, vendor_file_type, file_type;
+
+type hal_health_default_exec, exec_type, vendor_file_type, file_type;
+
+type mediacodec_exec, exec_type, vendor_file_type, file_type;
