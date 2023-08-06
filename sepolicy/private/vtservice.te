@@ -19,3 +19,4 @@ allow vtservice vtservice_service:service_manager add;
 get_prop(vtservice, hwservicemanager_prop)
 get_prop(vtservice, vendor_default_prop)
 
+allow network_stack fs_bpf:file { read write };
