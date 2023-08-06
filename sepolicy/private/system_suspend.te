@@ -11,3 +11,5 @@ allow system_suspend sysfs_batteryinfo:file { getattr open read };
 allow system_suspend sysfs_battery_supply:file { getattr open read };
 
 allow system_suspend sysfs_battery_supply:dir { read open };
+
+allow system_suspend sysfs_rtc:dir { read open };
