@@ -5,6 +5,7 @@ type sysfs_devfreq_file, fs_type, sysfs_type;
 # mtk_hal_audio
 type mtk_hal_audio, domain;
 type mtk_hal_bluetooth;
+type vendor_radio_check_prop, domain;
 
 # light hal
 type hal_light_default, fs_type, sysfs_type;

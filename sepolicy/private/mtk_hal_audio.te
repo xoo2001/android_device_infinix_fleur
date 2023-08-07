@@ -1,3 +1,5 @@
 allow mtk_hal_audio persist_data_file:dir { search };
 
 allow mtk_hal_audio self:process execmem;
+
+allow mtk_hal_audio vendor_radio_check_prop:property_service { set };
