@@ -39,14 +39,9 @@ lib64/libldacBT_enc.so
 # Camera
 vendor/lib64/libmtkcam_featurepolicy.so
 
-# Charger (Xiaomi)
-bin/charger:bin/chargeonlymode
-
 # Patched IMSService APK, from fleur-user 12 SP1A.210812.016 V13.0.9.0.SKEMIXM release-keys
 # https://github.com/Nem1xx/ImsService
 -system/priv-app/ImsService/ImsService.apk
 
 # Audio primary hardware module, evergreen-user 12 SP1A.210812.016 V13.0.4.0.SGBMIXM release-keys
 vendor/lib/hw/audio.primary.mt6833.so:vendor_overlay/lib/hw/audio.primary.mt6781.so
-
-

@@ -70,7 +70,7 @@ on property:persist.sys.fleur.dt2w=1
     # to hide Magisk & co.
     chmod 440 /proc/net/unix
 
-service charger /system/bin/chargeonlymode
+service charger /system/bin/charger
     class charger
     critical
     group system graphics
