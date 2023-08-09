@@ -10,10 +10,10 @@
 
 #include "vendor_init.h"
 
-#define FINGERPRINT_FL "Redmi/fleur_global/fleur:12/SP1A.210812.016/V13.0.8.0.SKEMIXM:user/test-keys"
-#define FINGERPRINT_FLP "POCO/fleur_p_global/fleur:12/SP1A.210812.016/V13.0.8.0.SKEMIXM:user/release-keys"
-#define FINGERPRINT_ML "Redmi/miel_global/miel:12/SP1A.210812.016/V13.0.8.0.SKEMIXM:user/release-keys"
-#define FINGERPRINT_MLP "POCO/miel_p_global/miel:12/SP1A.210812.016/V13.0.8.0.SKEMIXM:user/release-keys"
+#define FINGERPRINT_FL "Redmi/fleur_global/fleur:12/SP1A.210812.016/V13.0.9.0.SKEMIXM:user/test-keys"
+#define FINGERPRINT_FLP "POCO/fleur_p_global/fleur:12/SP1A.210812.016/V13.0.9.0.SKEMIXM:user/release-keys"
+#define FINGERPRINT_ML "Redmi/miel_global/miel:12/SP1A.210812.016/V13.0.9.0.SKEMIXM:user/release-keys"
+#define FINGERPRINT_MLP "POCO/miel_p_global/miel:12/SP1A.210812.016/V13.0.9.0.SKEMIXM:user/release-keys"
 
 static const variant_info_t fleur_info = {
     .hwc_value = "",
