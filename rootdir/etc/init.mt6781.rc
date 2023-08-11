@@ -82,3 +82,4 @@ on charger
 # ZRAM
 on property:sys.boot_completed=1
         write /proc/sys/vm/swappiness 60
+        write /sys/power/mem_sleep "deep"
