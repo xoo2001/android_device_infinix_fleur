@@ -77,3 +77,8 @@ on charger
     # Turn backlight on and switch to backlight trigger
     write /sys/class/leds/lcd-backlight/brightness "1000"
     write /sys/class/leds/lcd-backlight/trigger "backlight"
+
+
+# ZRAM
+on property:sys.boot_completed=1
+        write /proc/sys/vm/swappiness 60
