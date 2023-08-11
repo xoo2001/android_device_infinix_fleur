@@ -83,3 +83,9 @@ on charger
 on property:sys.boot_completed=1
         write /proc/sys/vm/swappiness 60
         write /sys/power/mem_sleep "deep"
+
+# Setup runtime blkio
+    write /dev/blkio/blkio.weight 1000
+    write /dev/blkio/background/blkio.weight 200
+    write /dev/blkio/blkio.group_idle 2000
+    write /dev/blkio/background/blkio.group_idle 0
