@@ -162,6 +162,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
 
+# Disable sf EGL image tracking
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_egl_image_tracker=1
+
 # Parts
 PRODUCT_PACKAGES += \
     XiaomiParts
