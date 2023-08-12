@@ -241,4 +241,5 @@ PRODUCT_ODM_PROPERTIES += \
     debug.sf.disable_client_composition_cache=0
 
 USE_DEX2OAT_DEBUG := false
+WITH_DEXPREOPT_DEBUG_INFO := false
 
