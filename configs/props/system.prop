@@ -34,6 +34,22 @@ ro.camera.sound.forced=0
 
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
+persist.device_config.runtime_native.usap_pool_enabled=false
+persist.sys.minfree_6g=73728,92160,110592,340000,1282868,1677312
+persist.sys.minfree_8g=73728,92160,110592,340000,1677312,2064384
+persist.sys.minfree_def=73728,92160,110592,340000,510000,645120
+pm.dexopt.install=speed-profile
+pm.dexopt.bg-dexopt=speed-profile
+pm.dexopt.boot=verify
+pm.dexopt.first-boot=verify
+pm.dexopt.ab-ota=speed-profile
+dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.dex2oat-threads=6
+dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.boot-dex2oat-threads=6
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.image-dex2oat-threads=6
 
 # Display
 persist.vendor.dc_backlight.enable=false
