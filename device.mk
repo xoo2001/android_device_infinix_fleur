@@ -1,7 +1,7 @@
 #
 # Copyright (C) 2020 The PixelExperience Project
 #
-# SPDX-License-Identifier: Apache-2.0
+ # SPDX-License-Identifier: Apache-2.0
 #
 
 DEVICE_PATH := device/xiaomi/fleur
@@ -199,3 +199,5 @@ PRODUCT_BOOT_JARS += \
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 31
 PRODUCT_EXTRA_VNDK_VERSIONS := 31
+
+USE_DEX2OAT_DEBUG := false
