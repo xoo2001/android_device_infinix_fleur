@@ -1,7 +1,7 @@
 #
 # Copyright (C) 2020 The PixelExperience Project
 #
-# SPDX-License-Identifier: Apache-2.0
+ # SPDX-License-Identifier: Apache-2.0
 #
 
 DEVICE_PATH := device/xiaomi/fleur
@@ -239,3 +239,6 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 31
 # BackPressure Propagation
 PRODUCT_ODM_PROPERTIES += \
     debug.sf.disable_client_composition_cache=0
+
+USE_DEX2OAT_DEBUG := false
+
