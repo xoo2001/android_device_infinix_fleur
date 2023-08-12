@@ -78,9 +78,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     DT2W-Service-Fleur
 
-# GCAM GO
-PRODUCT_PACKAGES += \
-    GCamGOPrebuilt-V3_8
+# MIUI CAMERA
+$(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
 
 # Fastbootd
 PRODUCT_PACKAGES += \
