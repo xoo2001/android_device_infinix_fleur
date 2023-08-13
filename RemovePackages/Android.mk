@@ -8,6 +8,11 @@ LOCAL_OVERRIDES_PACKAGES := \
     Maps \
     Videos \
     YouTube \
+    RecorderPrebuilt \
+    SafetyHubPrebuilt \
+    SoundAmplifierPrebuilt \
+    obdm_stub \
+    ScribePrebuilt \
 
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
