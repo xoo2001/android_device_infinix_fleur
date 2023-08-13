@@ -8,12 +8,6 @@ LOCAL_OVERRIDES_PACKAGES := \
     Maps \
     Videos \
     YouTube \
-    RecorderPrebuilt \
-    SafetyHubPrebuilt \
-    SoundAmplifierPrebuilt \
-    obdm_stub \
-    ScribePrebuilt \
-    CalculatorGooglePrebuilt \
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
