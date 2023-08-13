@@ -1,0 +1,2 @@
+type ccci_rpcd, domain;
+get_prop(ccci_rpcd, default_prop)

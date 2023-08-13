@@ -1,0 +1,2 @@
+type mi_ric, domain;
+allow mi_ric sysfs_bootinfo:dir { search };

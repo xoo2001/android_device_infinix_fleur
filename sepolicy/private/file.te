@@ -23,6 +23,12 @@ type vendor_mtk_atm_mdmode_prop, domain;
 type hal_fingerprint_default_exec, exec_type, vendor_file_type, file_type;
 type hal_health_default_exec, exec_type, vendor_file_type, file_type;
 type mediacodec_exec, exec_type, vendor_file_type, file_type;
+type mediadrm_vendor_data_file, file_type, data_file_type;
+type proc_swappiness, fs_type, proc_type;
+type sysfs_bootinfo, domain;
+type thermal_core_data_file, domain;
+type vendor_mtk_powerhal_gpu_prop, domain;
+type sysfs_soc, domain;
 
 # Health
 type vendor_sysfs_ac_supply, fs_type, sysfs_type;
