@@ -118,10 +118,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0_system \
