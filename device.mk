@@ -79,6 +79,10 @@ PRODUCT_PACKAGES += \
     DT2W-Service-Fleur
 
 # MIUI CAMERA
+TARGET_ALTERNATIVE_FUTEX_WAITERS := true
+TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT := true
+TARGET_INCLUDES_MIUI_CAMERA := true
+TARGET_USES_MIUI_CAMERA := true
 $(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
 
 # Fastbootd
