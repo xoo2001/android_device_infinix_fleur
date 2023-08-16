@@ -80,7 +80,7 @@ PRODUCT_PACKAGES += \
 
 # GCAM GO
 PRODUCT_PACKAGES += \
-    GCamGOPrebuilt-V3_8
+    GCamGOPrebuilt-V4
 
 # Fastbootd
 PRODUCT_PACKAGES += \
