@@ -24,6 +24,9 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
+# Assertion
+TARGET_OTA_ASSERT_DEVICE := fleur,miel,fleur_p,miel_p
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
