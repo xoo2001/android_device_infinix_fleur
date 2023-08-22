@@ -78,6 +78,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     BesLoudness
 
+# Dexpreopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SettingsGoogle \
+    SystemUIGoogle
+
 # DT2W
 PRODUCT_PACKAGES += \
     DT2W-Service-Fleur
