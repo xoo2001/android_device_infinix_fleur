@@ -5,9 +5,8 @@ Redmi Note 11S | Poco M4 Pro 4G (codenamed _"fleur"_) is a mid-range smartphone 
 It was released in February 2022.
 
 ## Known issues
-- SELinux is Permissive
-- SELinux allows NEVERALLOWS, because of sysbta.
-- Offline charging status
+- SELinux allows NEVERALLOWS, because of sysbta
+- Offline charging status (partially)
 
 
 ## Device specifications
