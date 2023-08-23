@@ -99,4 +99,11 @@
 
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
     <string name="config_oemFastChargerStatusPath" translatable="true">/sys/devices/platform/11e00000.i2c0/i2c-0/0-0066/power_supply/sc8551-standalone/charging_enabled</string>
+
+    <!-- The default refresh rate -->
+    <integer name="config_defaultRefreshRate">60</integer>
+
+    <!-- The default peak refresh rate. -->
+    <integer name="config_defaultPeakRefreshRate">90</integer>
+
 </resources>
