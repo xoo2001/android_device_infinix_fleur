@@ -128,7 +128,6 @@ debug.sf.earlyGl.app.duration=20000000
 debug.sf.hwc.min.duration=17000000
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_transaction_tracing=false
-debug.sf.enable_gl_backpressure=1
 debug.sf.predict_hwc_composition_strategy=0
 ro.surface_flinger.uclamp.min=130
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
