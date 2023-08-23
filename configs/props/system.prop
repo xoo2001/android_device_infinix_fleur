@@ -134,7 +134,6 @@ ro.surface_flinger.uclamp.min=130
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 debug.sf.enable_egl_image_tracker=1
 debug.gralloc.gfx_ubwc_disable=0
-ro.surface_flinger.supports_background_blur=1
 
 # SkialGL
 debug.hwui.renderer=skiagl
