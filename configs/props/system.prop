@@ -134,12 +134,6 @@ ro.surface_flinger.use_content_detection_for_refresh_rate=true
 debug.sf.enable_egl_image_tracker=1
 debug.gralloc.gfx_ubwc_disable=0
 
-# SkialGL
-debug.hwui.renderer=skiagl
-debug.renderengine.backend=skiaglthreaded
-renderthread.skia.reduceopstasksplitting=true
-debug.hwui.skia_atrace_enabled=false
-
 # USB
 ro.sys.usb.mtp.whql.enable=0
 ro.sys.usb.storage.type=mtp
