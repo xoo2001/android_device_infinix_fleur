@@ -29,6 +29,8 @@ type sysfs_bootinfo, domain;
 type thermal_core_data_file, domain;
 type vendor_mtk_powerhal_gpu_prop, domain;
 type sysfs_soc, domain;
+type sysfs_usb_supply, domain;
+type mtk_hal_sensors, domain;
 
 # Health
 type vendor_sysfs_ac_supply, fs_type, sysfs_type;
