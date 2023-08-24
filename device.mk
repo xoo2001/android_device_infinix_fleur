@@ -175,7 +175,7 @@ PRODUCT_PACKAGES += \
     WifiOverlayFleur \
     SystemUIOverlayFleur \
     SettingsOverlayFleur \
-    SimpleDeviceConfigOverlayfleur
+    SimpleDeviceConfigOverlayFleur
 
 # Runtine Device Name Overlays
 PRODUCT_PACKAGES += \
