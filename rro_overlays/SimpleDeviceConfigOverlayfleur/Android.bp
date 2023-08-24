@@ -15,7 +15,7 @@
 //
 
 runtime_resource_overlay {
-    name: "SimpleDeviceConfigOverlayVeux",
+    name: "SimpleDeviceConfigOverlayFleur",
     sdk_version: "current",
     product_specific: true
 }
