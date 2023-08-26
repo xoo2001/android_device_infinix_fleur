@@ -31,4 +31,8 @@
     <dimen name="physical_fingerprint_sensor_center_screen_location_y">955px</dimen>
     <dimen name="physical_fingerprint_sensor_center_screen_location_x">1080px</dimen>
 
+    <!-- Burn-in protection -->
+    <bool name="config_statusBarBurnInProtection">true</bool>
+    <integer name="config_shift_interval">40</integer>
+
 </resources>
