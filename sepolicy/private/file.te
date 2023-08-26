@@ -1,6 +1,7 @@
 # sysfs
 type sysfs_led, fs_type, sysfs_type;
 type sysfs_devfreq_file, fs_type, sysfs_type;
+type sysfs_therm, fs_type, sysfs_type;
 
 # mtk_hal_audio
 type mtk_hal_audio, domain;
@@ -57,4 +58,3 @@ type hal_fingerprint_default_exec, exec_type, vendor_file_type, file_type;
 
 # mediacodec
 type mediacodec_exec, exec_type, vendor_file_type, file_type;
-
