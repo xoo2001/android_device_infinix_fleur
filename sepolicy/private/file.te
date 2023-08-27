@@ -31,6 +31,8 @@ type vendor_mtk_powerhal_gpu_prop, domain;
 type sysfs_soc, domain;
 type sysfs_usb_supply, domain;
 type mtk_hal_sensors, domain;
+type sysfs_therm, domain;
+type vendor_mtk_soc_prop, domain;
 
 # Health
 type vendor_sysfs_ac_supply, fs_type, sysfs_type;
