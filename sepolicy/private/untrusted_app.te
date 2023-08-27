@@ -1,0 +1,8 @@
+allow untrusted_app sysfs_therm:dir { search read open };
+allow untrusted_app debugfs_tracing_debug:dir { read search open };
+get_prop(untrusted_app, vendor_mtk_soc_prop)
+allow untrusted_app sysfs_batteryinfo:dir { search open read };
+allow untrusted_app mnt_vendor_file:dir { search read open };
+allow untrusted_app proc_pid_max:file { read };
+get_prop(untrusted_app, wifi_hal_prop)
+allow untrusted_app_27 proc_pid_max:file { read };
