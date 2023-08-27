@@ -205,3 +205,14 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 31
 USE_DEX2OAT_DEBUG := false
 WITH_DEXPREOPT_DEBUG_INFO := false
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+
+# Speed profile services and wifi-service to reduce RAM and storage.
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
+# Do not generate libartd.
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+
+# Strip the local variable table and the local variable type table to reduce
+# the size of the system image. This has no bearing on stack traces, but will
+# leave less information available via JDWP.
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
