@@ -7,3 +7,12 @@ allow untrusted_app proc_pid_max:file { read };
 get_prop(untrusted_app, wifi_hal_prop)
 allow untrusted_app_27 proc_pid_max:file { read write open };
 allow untrusted_app sysfs_therm:file { read write open };
+allow untrusted_app proc_version:file { read write getattr};
+allow untrusted_app block_device:dir { search };
+get_prop(untrusted_app, serialno_prop)
+allow untrusted_app sysfs_devices_block:file { read };
+allow untrusted_app proc:file { read };
+allow untrusted_app block_device:dir { getattr };
+allow untrusted_app proc_pid_max:file { open };
+allow untrusted_app sysfs_therm:file { getattr };
+allow untrusted_app vendor_sysfs_battery_supply:dir { search };
