@@ -220,3 +220,6 @@ PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 # the size of the system image. This has no bearing on stack traces, but will
 # leave less information available via JDWP.
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
+
