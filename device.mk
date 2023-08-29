@@ -161,6 +161,7 @@ PRODUCT_PACKAGES += \
     WifiOverlayFleur \
     SystemUIOverlayFleur \
     SettingsOverlayFleur \
+    SettingsLibOverlayFleur \
     SimpleDeviceConfigOverlayFleur
 
 # Permissions
