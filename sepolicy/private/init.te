@@ -16,5 +16,5 @@ allow init hal_fingerprint_default:process { ptrace };
 allow init sysfs_devices_block:file { open };
 allow init socket_device:sock_file { setattr };
 allow init socket_device:sock_file { unlink };
-allow init proc_swappiness:file { write };
-allow init sysfs:file { write };
+allow init proc_swappiness:file { write open read getattr };
+allow init sysfs:file { write open read getattr };

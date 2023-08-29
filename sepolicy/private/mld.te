@@ -1,1 +1,0 @@
-allow mnld sysfs_led:dir { search };

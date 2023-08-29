@@ -1,0 +1,2 @@
+allow mnld sysfs_led:dir { search };
+allow mnld sysfs_led:file { read open write getattr };
