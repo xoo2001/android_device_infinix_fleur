@@ -98,5 +98,5 @@
     </array>
 
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
-    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/devices/platform/11e00000.i2c0/i2c-0/0-0066/power_supply/sc8551-standalone/charging_enabled</string>
+    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/bms/fastcharge_mode</string>
 </resources>
