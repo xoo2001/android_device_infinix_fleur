@@ -138,6 +138,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.fleur
 
+# MiuiCamera
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
+
 # MTK In-call service
 PRODUCT_PACKAGES += \
     MtkInCallService
