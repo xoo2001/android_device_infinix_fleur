@@ -207,3 +207,5 @@ persist.log.tag.AALLightSensor=S
 persist.log.tag.hwcomposer=S
 persist.log.tag.CCodec=S
 persist.log.tag.C2Store=S
+persist.log.tag.gralloc4=S
+persist.log.tag.MDP=S
