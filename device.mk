@@ -178,6 +178,8 @@ PRODUCT_PACKAGES += \
     FleurpSettingsProviderOverlay \
     MielSettingsProviderOverlay \
     MielpSettingsProviderOverlay
+    SettingsLibOverlayFleur \
+    SimpleDeviceConfigOverlayFleur
 
 # Permissions
 PRODUCT_COPY_FILES += \
