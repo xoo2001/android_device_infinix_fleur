@@ -162,7 +162,12 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayFleur \
     SettingsOverlayFleur \
     SettingsLibOverlayFleur \
-    SimpleDeviceConfigOverlayFleur
+    SimpleDeviceConfigOverlayFleur \
+    FleurWifiOverlay \
+    FleurpWifiOverlay \
+    MielWifiOverlay \
+    MielpWifiOverlay
+
 
 # Permissions
 PRODUCT_COPY_FILES += \
