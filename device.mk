@@ -209,3 +209,7 @@ PRODUCT_BOOT_JARS += \
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 31
 PRODUCT_EXTRA_VNDK_VERSIONS := 31
+
+# BackPressure Propagation
+PRODUCT_ODM_PROPERTIES += \
+    debug.sf.disable_client_composition_cache=0
