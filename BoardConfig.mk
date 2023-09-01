@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/fleur
+VENDOR_PATH := device/xiaomi/fleur-vendor
 
 # Architecture
 TARGET_ARCH := arm64
@@ -111,7 +112,7 @@ BOARD_USES_METADATA_PARTITION := true
 # Prebuilts
 TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS := true
 BUILD_WITHOUT_VENDOR := true
-BOARD_PREBUILT_VENDORIMAGE := $(DEVICE_PATH)/prebuilts/vendor.img
+BOARD_PREBUILT_VENDORIMAGE := $(VENDOR_PATH)/vendor.img
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6781
