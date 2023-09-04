@@ -1,3 +1,6 @@
+# Executables
+/system/bin/chargeonlymode                    u:object_r:charger_exec:s0
+
 # Lights
 /system/bin/hw/android\.hardware\.lights-service\.mediatek                                         u:object_r:hal_light_default_exec:s0
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.lights-service\.mediatek u:object_r:hal_light_default_exec:s0

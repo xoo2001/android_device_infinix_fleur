@@ -1,1 +1,6 @@
+type vendor_audio_prop, property_type;
+type mediacodec, domain;
 set_prop(mtk_hal_audio, vendor_default_prop)
+get_prop(mtk_hal_audio, vendor_audio_prop)
+get_prop(audioserver, vendor_default_prop)
+get_prop(mediacodec, default_prop)

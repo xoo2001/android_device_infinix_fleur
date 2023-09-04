@@ -1,0 +1,5 @@
+allow nvram_daemon proc_cmdline:file { read };
+allow nvram_daemon sysfs_dt_firmware_android:dir { search };
+allow nvram_daemon persist_data_file:dir { search };
+allow nvram_daemon proc_cmdline:file { open read write getattr };
+allow nvram_daemon sysfs_dt_firmware_android:file { read write open getattr };
