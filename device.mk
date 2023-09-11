@@ -168,8 +168,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Symbols
 PRODUCT_PACKAGES += \
-    libshim_vtservice \
-    libshim_beanpod.vendor
+    libshim_vtservice
 
 # Telephony
 PRODUCT_BOOT_JARS += \
