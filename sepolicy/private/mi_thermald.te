@@ -1,0 +1,5 @@
+type mi_thermald, domain;
+type mi_thermald_exec, exec_type, vendor_file_type, file_type;
+allow mi_thermald thermal_core_data_file:file { unlink };
+allow mi_thermald self:capability { dac_override };
+allow mi_thermald vendor_sysfs_battery_supply:dir { search };
