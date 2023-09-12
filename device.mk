@@ -166,6 +166,9 @@ PRODUCT_PACKAGES += \
     MielWifiOverlay \
     MielpWifiOverlay
 
+# Perf
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/perf/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/31/etc)
 
 # Permissions
 PRODUCT_COPY_FILES += \
