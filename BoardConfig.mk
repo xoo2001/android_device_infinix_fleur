@@ -28,6 +28,9 @@ ART_BUILD_TARGET_DEBUG := false
 ART_BUILD_HOST_NDEBUG := true
 ART_BUILD_HOST_DEBUG := false
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := fleur,miel,fleurp,mielp
+
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
