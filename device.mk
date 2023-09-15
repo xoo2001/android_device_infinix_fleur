@@ -4,7 +4,7 @@
  # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/fleur
+DEVICE_PATH := device/infinix/x6827
 
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -97,15 +97,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
 
 # ImsInit hack
-PRODUCT_PACKAGES += \
-    ImsInit
+#PRODUCT_PACKAGES += \
+#    ImsInit
 
 # ImsService
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
-    RcsService \
-    ImsServiceBase
+    RcsService
+#    ImsServiceBase
 
 # Init
 PRODUCT_PACKAGES += \
@@ -132,8 +132,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/dtb.img:dtb.img
 
 # MTK In-call service
-PRODUCT_PACKAGES += \
-    MtkInCallService
+#PRODUCT_PACKAGES += \
+#    MtkInCallService
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
