@@ -140,10 +140,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-aosp
 
-# Remove Unwanted Packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
 # Runtime Resource Overlays
 PRODUCT_PACKAGES += \
     FrameworksResOverlayFleur \
