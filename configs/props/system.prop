@@ -38,7 +38,6 @@ ro.surface_flinger.supports_background_blur=0
 ro.camera.sound.forced=0
 vendor.camera.aux.packagelist=org.lineageos.snap,com.android.camera
 persist.vendor.camera.privapp.list=com.android.camera
-ro.miui.notch=1 
 
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
@@ -136,7 +135,6 @@ ro.mtk_perf_response_time=1
 ro.vendor.perf.scroll_opt=true
 
 # Product
-ro.product.mod_device=fleur_global
 ro.product.property_source_order=odm,vendor,product,system
 
 # RIL
