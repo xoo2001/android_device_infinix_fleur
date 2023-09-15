@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),fleur)
+ifeq ($(TARGET_DEVICE),x6827)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 include $(CLEAR_VARS)
 

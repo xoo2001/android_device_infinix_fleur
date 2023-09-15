@@ -18,10 +18,10 @@
 
 set -e
 
-DEVICE=fleur
-VENDOR=xiaomi
+DEVICE=x6827
+VENDOR=infinix
 
-INITIAL_COPYRIGHT_YEAR=2021
+INITIAL_COPYRIGHT_YEAR=2023
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

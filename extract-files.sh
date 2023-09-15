@@ -18,8 +18,8 @@
 
 set -e
 
-DEVICE=fleur
-VENDOR=xiaomi
+DEVICE=x6827
+VENDOR=infinix
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

@@ -16,7 +16,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/fleur/fleur-vendor.mk)
+$(call inherit-product, vendor/infinix/x6827/x6827-vendor.mk)
 
 # A/B
 AB_OTA_UPDATER := true

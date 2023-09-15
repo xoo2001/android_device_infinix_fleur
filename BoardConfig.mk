@@ -4,8 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/fleur
-VENDOR_PATH := device/xiaomi/fleur-vendor
+DEVICE_PATH := device/infinix/x6827
+VENDOR_PATH := vendor/infinix/x6827
 
 # Architecture
 TARGET_ARCH := arm64
@@ -29,7 +29,7 @@ ART_BUILD_HOST_NDEBUG := true
 ART_BUILD_HOST_DEBUG := false
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := fleur,miel,fleurp,mielp
+TARGET_OTA_ASSERT_DEVICE := fleur,miel,fleurp,mielp,x6827
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -38,7 +38,7 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := fleur
+TARGET_BOOTLOADER_BOARD_NAME := CY-X6827-H812
 TARGET_NO_BOOTLOADER := true
 
 # Broken flags
@@ -47,11 +47,11 @@ BUILD_BROKEN_PREBUILT_ELF_FILES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Display
-TARGET_SCREEN_DENSITY := 393
+TARGET_SCREEN_DENSITY := 480
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_fleur
-TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_fleur
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_infinix_x6827
+TARGET_RECOVERY_DEVICE_MODULES ?= init_infinix_x6827
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
@@ -79,7 +79,7 @@ HWUI_COMPILE_FOR_PERF := true
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072                   # 2048      * 64   (pagesize)
-BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864         # 65536     * 1024 (sdc36)
+BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432         # 65536     * 1024 (sdc36)
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608            # 8192      * 1024 (sdc38)
 
 # Partitions - Dynamic
