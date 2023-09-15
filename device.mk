@@ -71,13 +71,13 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-service
 
 # Bluetooth Audio (System-side HAL, sysbta)
-PRODUCT_PACKAGES += \
-    audio.sysbta.default \
-    android.hardware.bluetooth.audio-service-system
+#PRODUCT_PACKAGES += \
+#    audio.sysbta.default \
+#    android.hardware.bluetooth.audio-service-system
 
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration.xml \
-    $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration_7_0.xml
+#PRODUCT_COPY_FILES += \
+#    $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration.xml \
+#    $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration_7_0.xml
 
 # Dexpreopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -85,8 +85,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUIGoogle
 
 # DT2W
-PRODUCT_PACKAGES += \
-    DT2W-Service-x6827
+#PRODUCT_PACKAGES += \
+#    DT2W-Service-x6827
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -141,18 +141,14 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-aosp
 
 # Runtime Resource Overlays
-PRODUCT_PACKAGES += \
-    FrameworksResOverlayFleur \
-    TetheringOverlayFleur \
-    WifiOverlayFleur \
-    SystemUIOverlayFleur \
-    SettingsOverlayFleur \
-    SettingsLibOverlayFleur \
-    SimpleDeviceConfigOverlayFleur \
-    FleurWifiOverlay \
-    FleurpWifiOverlay \
-    MielWifiOverlay \
-    MielpWifiOverlay
+#PRODUCT_PACKAGES += \
+#    FrameworksResOverlayx6827 \
+#    TetheringOverlayx6827 \
+#    WifiOverlayx6827 \
+#    SystemUIOverlayx6827 \
+#    SettingsOverlayx6827 \
+#    SettingsLibOverlayx6827 \
+#    SimpleDeviceConfigOverlayx6827
 
 # Perf
 PRODUCT_COPY_FILES += \
@@ -171,8 +167,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
 # Symbols
-PRODUCT_PACKAGES += \
-    libshim_vtservice
+#PRODUCT_PACKAGES += \
+#    libshim_vtservice
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
