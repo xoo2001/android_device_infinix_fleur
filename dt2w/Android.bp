@@ -10,12 +10,13 @@
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
 
 android_app {
-    name: "DT2W-Service-Fleur",
+    name: "DT2W-Service-x6827",
 
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
@@ -29,13 +30,13 @@ android_app {
     },
 
     required: [
-        "privapp-permissions_co.potatoproject.dt2w.fleur"
+        "privapp-permissions_co.potatoproject.dt2w.x6827"
     ]
 }
 
 prebuilt_etc {
-    name: "privapp-permissions_co.potatoproject.dt2w.fleur",
+    name: "privapp-permissions_co.potatoproject.dt2w.x6827",
     sub_dir: "permissions",
-    src: "privapp-permissions_co.potatoproject.dt2w.fleur.xml",
+    src: "privapp-permissions_co.potatoproject.dt2w.x6827.xml",
     filename_from_src: true,
 }

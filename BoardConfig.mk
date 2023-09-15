@@ -5,7 +5,7 @@
 #
 
 DEVICE_PATH := device/infinix/x6827
-VENDOR_PATH := vendor/infinix/x6827
+VENDOR_PATH := vendor/infinix/x6827-prebuilt
 
 # Architecture
 TARGET_ARCH := arm64

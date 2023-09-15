@@ -16,7 +16,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Get non-open-source specific aspects
-#$(call inherit-product, vendor/infinix/x6827/x6827-vendor.mk)
+$(call inherit-product, vendor/infinix/x6827/x6827-vendor.mk)
 
 # A/B
 AB_OTA_UPDATER := true
@@ -86,7 +86,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 # DT2W
 PRODUCT_PACKAGES += \
-    DT2W-Service-Fleur
+    DT2W-Service-x6827
 
 # Fastbootd
 PRODUCT_PACKAGES += \
