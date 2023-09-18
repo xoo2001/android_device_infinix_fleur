@@ -23,7 +23,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Enable doze mode -->
-    <bool name="doze_display_state_supported">true</bool>
+    <bool name="doze_display_state_supported">false</bool>
 
     <dimen name="rounded_corner_content_padding">52.0px</dimen>
     <dimen name="status_bar_padding_end">3.0px</dimen>
