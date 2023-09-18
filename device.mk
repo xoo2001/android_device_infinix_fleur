@@ -175,6 +175,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
 
+# Power/Perf configs
+PRODUCT_COPY_FILES += \
+    $(foreach file,$(wildcard $(LOCAL_PATH)/configs/perf/*), \
+        $(file):$(addprefix $(TARGET_COPY_OUT_VENDOR)/etc/, $(notdir $(file))) )
+
 # Few Properties
 PRODUCT_PROPERTY_OVERRIDES += \
         ro.secure=0 \
