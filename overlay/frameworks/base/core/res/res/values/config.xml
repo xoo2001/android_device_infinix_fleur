@@ -25,39 +25,11 @@
     <!-- ImsService package name to bind to by default, if config_dynamic_bind_ims is true -->
      <string name="config_ims_package">com.mediatek.ims</string>
 
-    <!-- Whether device supports double tap to wake -->
-    <bool name="config_supportDoubleTapWake">true</bool>
-
     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
     <bool name="config_zramWriteback">true</bool>
 
-    <bool name="config_is_powerbutton_fps">true</bool>
-
-    <!-- Does the device has a fps on power. -->
-    <bool name="config_fingerprintWakeAndUnlock">false</bool>
-
-    <bool name="config_fpCancelIfNotIdle">true</bool>
-
     <!-- Pocket Lock -->
     <bool name="config_pocketModeSupported">true</bool>
-
-    <!-- Delay that allows some content to arrive at the display before switching
-         from DOZE to ON, in millis. -->
-    <integer name="config_wakeUpDelayDoze">32</integer>
-
-    <!-- An array of arrays of side fingerprint sensor properties relative to each display.
-         Note: this value is temporary and is expected to be queried directly
-         from the HAL in the future. -->
-    <array name="config_sfps_sensor_props" translatable="false">
-        <item>@array/config_sfps_sensor_props_0</item>
-    </array>
-
-    <array name="config_sfps_sensor_props_0" translatable="false">
-        <item></item> <!--item>displayId</item-->
-        <item>1080</item> <!--item>sensorLocationX</item-->
-        <item>955</item> <!--item>sensorLocationY</item-->
-        <item>110</item> <!--item>sensorRadius</item-->
-    </array>
 
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
     <string name="config_oemFastChargerStatusPath" translatable="false">/sys/devices/platform/11e00000.i2c0/i2c-0/0-0066/power_supply/sc8551-standalone/charging_enabled</string>
