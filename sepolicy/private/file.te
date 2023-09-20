@@ -2,6 +2,7 @@
 type sysfs_led, fs_type, sysfs_type;
 type sysfs_devfreq_file, fs_type, sysfs_type;
 type sysfs_therm, fs_type, sysfs_type;
+type sysfs_usb_supply, fs_type, sysfs_type;
 
 # mtk_hal_audio
 type mtk_hal_audio, domain;
