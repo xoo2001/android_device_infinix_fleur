@@ -79,8 +79,15 @@ TARGET_NO_KERNEL_OVERRIDE := true
 PRODUCT_COPY_FILES += \
     $(KERNEL_PATH)/Image.gz:kernel
 
+BOARD_VENDOR_KERNEL_MODULES := \
+    $(foreach module,$(wildcard $(KERNEL_PATH)/mo>
+        $(module))
+
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
+
+TARGET_COPY_OUT_PRODUCT := product
+TARGET_COPY_OUT_VENDOR := vendor
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072                   # 2048      * 64   (pagesize)
