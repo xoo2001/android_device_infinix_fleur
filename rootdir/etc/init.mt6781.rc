@@ -20,6 +20,9 @@ on property:init.svc.face_hal=restarting
     stop face_hal
 
 on property:sys.boot_completed=1
+    #Stop bootanimation
+    stop bootanim
+
     # USB-OTG
     chown system system /sys/class/power_supply/usb/otg_switch
     chmod 0666 /sys/class/power_supply/usb/otg_switch
