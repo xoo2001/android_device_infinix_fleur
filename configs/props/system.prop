@@ -78,6 +78,8 @@ persist.sys.fuse.passthrough.enable=true
 ro.opengles.version=196610
 
 # Graphics
+debug.sf.enable_hwc_vds=1
+debug.sf.latch_unsignaled=1
 debug.composition.type=gpu
 persist.sys.composition.type=gpu
 ro.hwui.use_vulkan=false
