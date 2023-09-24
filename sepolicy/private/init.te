@@ -25,5 +25,3 @@ allow init default_prop:property_service {set};
 set_prop(mtk_hal_audio, vendor_default_prop)
 
 set_prop(mtk_hal_bluetooth, default_prop)
-
-

@@ -10,7 +10,7 @@
 
 #include "vendor_init.h"
 
-#define FINGERPRINT_FL "Redmi/fleur_global/fleur:12/SP1A.210812.016/V13.0.9.0.SKEMIXM:user/test-keys"
+#define FINGERPRINT_FL "Redmi/fleur_global/fleur:12/SP1A.210812.016/V13.0.9.0.SKEMIXM:user/release-keys"
 #define FINGERPRINT_FLP "POCO/fleur_p_global/fleur:12/SP1A.210812.016/V13.0.9.0.SKEMIXM:user/release-keys"
 #define FINGERPRINT_ML "Redmi/miel_global/miel:12/SP1A.210812.016/V13.0.9.0.SKEMIXM:user/release-keys"
 #define FINGERPRINT_MLP_IN "POCO/miel_p_in/miel:12/SP1A.210812.016/V13.0.5.0.SKEINXM:user/release-keys"
