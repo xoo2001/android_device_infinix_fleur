@@ -80,7 +80,7 @@ PRODUCT_COPY_FILES += \
     $(KERNEL_PATH)/Image.gz:kernel
 
 BOARD_VENDOR_KERNEL_MODULES := \
-    $(foreach module,$(wildcard $(KERNEL_PATH)/mo>
+    $(foreach module,$(wildcard $(KERNEL_PATH)/modules/*.ko), \
         $(module))
 
 # HWUI
