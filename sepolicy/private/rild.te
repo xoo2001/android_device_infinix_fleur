@@ -1,3 +1,6 @@
+type rild, domain;
+type rild_exec, exec_type, file_type;
 get_prop(rild, vendor_mtk_call_drop_prop)
 get_prop(rild, default_prop)
 set_prop(rild, vendor_default_prop)
+set_prop(rild, default_prop)

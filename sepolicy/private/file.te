@@ -1,31 +1,7 @@
-# sysfs
 type sysfs_led, fs_type, sysfs_type;
-type sysfs_devfreq_file, fs_type, sysfs_type;
-type sysfs_therm, fs_type, sysfs_type;
-type sysfs_usb_supply, fs_type, sysfs_type;
-
-# mtk_hal_audio
-type mtk_hal_audio, domain;
-type mtk_hal_bluetooth;
-type vendor_radio_check_prop, domain;
-
-# light hal
 type hal_light_default, fs_type, sysfs_type;
 type hal_light_default_exec, fs_type, sysfs_type;
-
-# firmware
-type adsprpcd_file, file_type;
-type bt_firmware_file, file_type;
-type firmware_file, file_type;
-type persist_file, file_type;
-type persist_data_file, file_type;
-
-# rild
-type rild, domain;
-type rild_exec, exec_type, file_type;
-
-# vendor_mtk_call_drop_prop
-type vendor_mtk_call_drop_prop, domain;
+type mtk_hal_audio, domain;
 
 # Health
 type vendor_sysfs_ac_supply, fs_type, sysfs_type;
@@ -36,27 +12,3 @@ type vendor_sysfs_bms_supply, fs_type, sysfs_type;
 type vendor_sysfs_parallel_supply, fs_type, sysfs_type;
 type vendor_sysfs_main_supply, fs_type, sysfs_type;
 type hal_health_default, domain;
-type hal_health_default_exec, exec_type, vendor_file_type, file_type;
-
-# domains
-type nvram_daemon, domain;
-type hal_mtdservice_default, domain;
-type hal_displayfeature_xiaomi_default, domain;
-type camera_persist_file, domain;
-type mnld, domain;
-type ccci_mdinit, domain;
-type sysfs_boot_mode, domain;
-type wlan_assistant, domain;
-type hal_fingerprint_default, domain;
-type bip, domain;
-type gsm0710muxd, domain;
-type fuelgauged_nvram, domain;
-type sysfs_battery_supply, domain;
-type vendor_mtk_atm_mdmode_prop, domain;
-type thermal_core_data_file, domain;
-
-# fingerprint
-type hal_fingerprint_default_exec, exec_type, vendor_file_type, file_type;
-
-# mediacodec
-type mediacodec_exec, exec_type, vendor_file_type, file_type;

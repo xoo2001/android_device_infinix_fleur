@@ -1,3 +1,0 @@
-type stflashtool, domain;
-get_prop(stflashtool, nfc_prop)
-allow stflashtool sysfs_soc:dir { search };

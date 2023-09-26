@@ -1,20 +1,55 @@
-allow fsck block_device:blk_file { read };
-allow fsck block_device:blk_file { read write };
-allow init proc:file { write };
+type ipsec_mon, domain;
+type stflashtool, domain;
+type ipsec_mon_exec, exec_type, file_type, vendor_file_type;
+type ccci_rpcd, domain;
+type mi_ric, domain;
+type vendor_mtk_call_drop_prop, domain;
+type nvram_daemon, domain;
+type hal_displayfeature_xiaomi_default, domain;
+type camera_persist_file, domain;
+type persist_data_file, domain;
+type mnld, domain;
+type ccci_mdinit, domain;
+type sysfs_boot_mode, domain;
+type wlan_assistant, domain;
+type hal_fingerprint_default, domain;
+type bip, domain;
+type gsm0710muxd, domain;
+type fuelgauged_nvram, domain;
+type sysfs_battery_supply, domain;
+type vendor_mtk_atm_mdmode_prop, domain;
+type hal_fingerprint_default_exec, exec_type, vendor_file_type, file_type;
+type hal_health_default_exec, exec_type, vendor_file_type, file_type;
+type mediacodec_exec, exec_type, vendor_file_type, file_type;
+type mediadrm_vendor_data_file, file_type, data_file_type;
+type proc_swappiness, fs_type, proc_type;
+type sysfs_bootinfo, domain;
+type thermal_core_data_file, domain;
+type vendor_mtk_powerhal_gpu_prop, domain;
+type sysfs_soc, domain;
+type sysfs_usb_supply, domain;
+type mtk_hal_sensors, domain;
+type sysfs_therm, domain;
+type vendor_mtk_soc_prop, domain;
+
+get_prop(bip, net_dns_prop)
+allow ccci_mdinit sysfs_boot_mode:file { read };
+get_prop(ccci_mdinit, init_service_status_private_prop)
+allow ccci_mdinit sysfs_boot_mode:file r_file_perms;
+get_prop(ccci_rpcd, default_prop)
+allow fsck block_device:blk_file r_file_perms;
+allow fuelgauged_nvram sysfs_dt_firmware_android:dir r_dir_perms;
+allow fuelgauged_nvram sysfs_dt_firmware_android:file r_file_perms;
+set_prop(gsm0710muxd, ctl_stop_prop)
+allow ipsec_mon self:netlink_route_socket { nlmsg_readpriv };
+allow mi_ric sysfs_bootinfo:dir { search };
+allow mnld sysfs_led:dir { search };
+allow mnld sysfs_led:file r_file_perms;
 allow nvram_daemon proc_cmdline:file { read };
 allow nvram_daemon sysfs_dt_firmware_android:dir { search };
-allow hal_mtdservice_default file_contexts_file:file { read };
-allow hal_mtdservice_default camera_persist_file:dir { getattr };
-get_prop(hal_displayfeature_xiaomi_default, default_prop)
-allow hal_mtdservice_default self:capability { sys_admin };
-allow hal_mtdservice_default self:capability { dac_read_search };
-allow hal_mtdservice_default self:capability { dac_override };
 allow nvram_daemon persist_data_file:dir { search };
-allow mnld sysfs_led:dir { search };
-allow ccci_mdinit sysfs_boot_mode:file { read };
-set_prop(wlan_assistant, radio_prop)
-allow init hal_fingerprint_default:process { ptrace };
-get_prop(ccci_mdinit, init_service_status_private_prop)
-get_prop(bip, net_dns_prop)
-set_prop(gsm0710muxd, ctl_stop_prop)
-allow fuelgauged_nvram sysfs_dt_firmware_android:dir { search };
+allow nvram_daemon proc_cmdline:file rw_file_perms;
+allow nvram_daemon sysfs_dt_firmware_android:file rw_file_perms;
+allow shell zygote:unix_stream_socket { getopt };
+get_prop(stflashtool, nfc_prop)
+allow stflashtool sysfs_soc:dir { search };

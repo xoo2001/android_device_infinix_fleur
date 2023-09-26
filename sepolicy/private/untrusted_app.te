@@ -1,8 +1,18 @@
-# allow apps to read battery status
-r_dir_file(untrusted_app, sysfs_battery_supply)
-r_dir_file(untrusted_app, sysfs_usb_supply)
-
-# allow apps to read thermals
-r_dir_file(untrusted_app, sysfs_therm)
-
-allow untrusted_app unlabeled:filesystem { getattr };
+allow untrusted_app sysfs_therm:dir { search read open };
+allow untrusted_app debugfs_tracing_debug:dir { read search open };
+get_prop(untrusted_app, vendor_mtk_soc_prop)
+allow untrusted_app sysfs_batteryinfo:dir { search open read };
+allow untrusted_app mnt_vendor_file:dir { search read open };
+allow untrusted_app proc_pid_max:file { read };
+get_prop(untrusted_app, wifi_hal_prop)
+allow untrusted_app_27 proc_pid_max:file { read write open };
+allow untrusted_app sysfs_therm:file { read write open };
+allow untrusted_app proc_version:file { read write getattr};
+allow untrusted_app block_device:dir { search };
+get_prop(untrusted_app, serialno_prop)
+allow untrusted_app sysfs_devices_block:file { read };
+allow untrusted_app proc:file { read };
+allow untrusted_app block_device:dir { getattr };
+allow untrusted_app proc_pid_max:file { open };
+allow untrusted_app sysfs_therm:file { getattr };
+allow untrusted_app vendor_sysfs_battery_supply:dir { search };

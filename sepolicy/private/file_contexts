@@ -1,8 +1,5 @@
-# Batterysecret
-/(vendor|system/vendor)/bin/batterysecret u:object_r:batterysecret_exec:s0
-
-# Brightness
-/sys/devices/platform/disp_leds/leds(/.*)?                                             u:object_r:sysfs_led:s0
+# Executables
+/system/bin/chargeonlymode                    u:object_r:charger_exec:s0
 
 # Lights
 /system/bin/hw/android\.hardware\.lights-service\.mediatek                                         u:object_r:hal_light_default_exec:s0
@@ -15,6 +12,9 @@
 
 # Sysbta
 /system/bin/hw/android\.hardware\.bluetooth\.audio-service-system    u:object_r:hal_audio_sysbta_exec:s0
+
+# Brightness
+/sys/devices/platform/disp_leds/leds(/.*)?                                             u:object_r:sysfs_led:s0
 
 # VoLTE
 /system/bin/vtservice           u:object_r:vtservice_exec:s0
