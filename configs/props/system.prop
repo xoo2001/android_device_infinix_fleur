@@ -29,6 +29,11 @@ persist.bluetooth.system_audio_hal.enabled=1
 # Brand
 Build.BRAND=MTK
 
+# Blur
+persist.sysui.disableBlur=1
+ro.sf.blurs_are_expensive=0
+ro.surface_flinger.supports_background_blur=0
+
 # Camera
 ro.camera.sound.forced=0
 vendor.camera.aux.packagelist=org.lineageos.snap,com.android.camera
