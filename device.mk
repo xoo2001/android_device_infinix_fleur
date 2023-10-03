@@ -74,10 +74,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration.xml \
     $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration_7_0.xml
 
-# BessLoudness
-PRODUCT_PACKAGES += \
-    BesLoudness
-
 # Dexpreopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SettingsGoogle \
@@ -213,10 +209,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mtkpower@1.0.vendor \
     vendor.mediatek.hardware.mtkpower@1.1.vendor \
     vendor.mediatek.hardware.mtkpower@1.2-service.stub
-
-# PowerOffAlarm
-PRODUCT_PACKAGES += \
-    PowerOffAlarm
 
 # Few Properties
 PRODUCT_PROPERTY_OVERRIDES += \
