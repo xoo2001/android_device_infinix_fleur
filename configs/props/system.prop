@@ -155,6 +155,7 @@ debug.sf.earlyGl.app.duration=24000000
 debug.sf.earlyGl.sf.duration=30000000
 debug.sf.hwc.min.duration=23000000
 debug.sf.late.app.duration=24000000
+ro.surface_flinger.enable_layer_caching=true
 debug.sf.late.sf.duration=30000000
 debug.sf.latch_unsignaled=0
 debug.sf.predict_hwc_composition_strategy=0
