@@ -13,6 +13,7 @@ on init
 on post-fs-data
     # Services
     stop console
+    rm /data/logcat.txt
 
 on post-fs
 
@@ -91,3 +92,9 @@ on property:sys.boot_completed=1
     write /dev/blkio/background/blkio.weight 200
     write /dev/blkio/blkio.group_idle 2000
     write /dev/blkio/background/blkio.group_idle 0
+
+# LogS
+service logcat_debug /bin/logcat -b all -f /data/logcat.txt -v threadtime
+    class main
+    user root
+    group system
