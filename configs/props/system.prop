@@ -145,6 +145,16 @@ ro.product.property_source_order=odm,vendor,product,system
 vendor.rild.libpath=mtk-ril.so
 vendor.rild.libargs=-d /dev/ttyC0
 
+# RIL Powersaving
+persist.radio.add_power_save=1
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=0
+ro.ril.fast.dormancy.rule=1
+ro.ril.fast.dormancy.timeout=3
+ro.mot.eri.losalert.delay=100
+ro.vold.umsdirtyratio=20
+power.saving.mode=1
+
 # Surfaceflinger
 debug.sf.enable_egl_image_tracker=1
 debug.sf.disable_backpressure=1
