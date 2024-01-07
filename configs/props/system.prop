@@ -172,7 +172,7 @@ ro.surface_flinger.uclamp.min=130
 ro.hwui.render_ahead=20
 
 # SkialGL
-debug.hwui.renderer=opengl
+debug.hwui.renderer=skiagl
 debug.renderengine.backend=skiaglthreaded
 renderthread.skia.reduceopstasksplitting=true
 debug.hwui.skia_atrace_enabled=false
