@@ -23,3 +23,5 @@ PRODUCT_MANUFACTURER := Xiaomi
 TARGET_BOOT_ANIMATION_RES := 1440
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+# Build Fingerprint
+BUILD_FINGERPRINT := "Xiaomi/missi/missi:13/TP1A.220624.014/V14.0.6.0.TKEINXM:user/release-keys"
