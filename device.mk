@@ -105,17 +105,6 @@ PRODUCT_PACKAGES += \
     libfmjni \
     FMRadio
 
-# ImsInit hack
-PRODUCT_PACKAGES += \
-    ImsInit
-
-# ImsService
-PRODUCT_PACKAGES += \
-    com.android.ims.rcsmanager \
-    PresencePolling \
-    RcsService \
-    ImsServiceBase
-
 # Init
 PRODUCT_PACKAGES += \
     init.mt6781.rc
