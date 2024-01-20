@@ -18,3 +18,7 @@ allow init socket_device:sock_file { setattr };
 allow init socket_device:sock_file { unlink };
 allow init proc_swappiness:file { write open read getattr };
 allow init sysfs:file { write open read getattr };
+
+# Allow init to write sysfs_led
+allow init sysfs_led:file { write };
+
