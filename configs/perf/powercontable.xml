@@ -168,6 +168,14 @@
         <MinValue>1</MinValue>
         <DefaultValue>130</DefaultValue>
     </CMD>
+    <CMD name="PERF_RES_GPU_SHED_MODE" id="0x0302c000">
+        <Entry path="/sys/devices/platform/13000000.mali/js_ctx_scheduling_mode"></Entry>
+        <Compare>more</Compare>
+        <MaxValue>1</MaxValue>
+        <MinValue>0</MinValue>
+        <DefaultValue>0</DefaultValue>
+        <Valid>1</Valid>
+    </CMD>
     <CMD name="PERF_RES_FPS_FSTB_JUMP_CHECK_NUM" id="0x02008100">
         <Entry path="/sys/kernel/fpsgo/fstb/jump_check_num"></Entry>
         <Compare>more</Compare>
