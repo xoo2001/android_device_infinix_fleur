@@ -5,7 +5,8 @@
 #
 
 DEVICE_PATH := device/xiaomi/fleur
-KERNEL_PATH := device/xiaomi/fleur-kernel
+VENDOR_PATH := vendor/xiaomi/fleur
+KERNEL_PATH := kernel/xiaomi/fleur
 
 # Architecture
 TARGET_ARCH := arm64
@@ -57,24 +58,17 @@ BOARD_KERNEL_TAGS_OFFSET := 0x0bc08000
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
-
+TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_SOURCE := device/xiaomi/fleur-kernel/kernel-headers
-
-# Kernel - prebuilt
-TARGET_FORCE_PREBUILT_KERNEL := true
-BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
-TARGET_PREBUILT_DTB := $(KERNEL_PATH)/dtb.img
 
 # Kill lineage kernel build task while preserving kernel
+TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_NO_KERNEL_OVERRIDE := true
 PRODUCT_COPY_FILES += \
     $(KERNEL_PATH)/Image.gz:kernel
-
-BOARD_VENDOR_KERNEL_MODULES := \
-    $(foreach module,$(wildcard $(KERNEL_PATH)/modules/*.ko), \
-        $(module))
+TARGET_PREBUILT_DTB := $(KERNEL_PATH)/dtb.img
+BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
 
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
@@ -121,7 +115,7 @@ BOARD_USES_METADATA_PARTITION := true
 # Prebuilts
 TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS := true
 BUILD_WITHOUT_VENDOR := true
-BOARD_PREBUILT_VENDORIMAGE := $(DEVICE_PATH)/prebuilts/vendor.img
+BOARD_PREBUILT_VENDORIMAGE := $(VENDOR_PATH)/fragments/vendor.img
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6781
