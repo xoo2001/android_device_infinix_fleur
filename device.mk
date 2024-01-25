@@ -5,7 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/fleur
-KERNEL_PAHH := kernel/xiaomi/fleur
+KERNEL_PATH := kernel/xiaomi/fleur
 
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
