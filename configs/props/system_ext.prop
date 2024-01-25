@@ -252,6 +252,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.logd.size.stats=0 \
     debug.atrace.tags.enableflags=0 \
     persist.service.pcsync.enable=0 \
-    persist.service.lgospd.enable=0
-
+    persist.service.lgospd.enable=0 \
+    persist.log.tag.OpenGLRenderer=S \
+    persist.log.tag.KernelCpuUidActiveTimeReader=S \
+    persist.log.tag.Tracer=S \
+    persist.log.tag.NearbySharing=S \
+    persist.log.tag.IntervalStats=S \
+    persist.log.tag.CompatibilityChangeReporter=S \
+    persist.log.tag.SQLiteLog=S \
+    persist.log.tag.wificond=S \
+    persist.log.tag.b/223498680=S \
+    persist.log.tag.TrafficStats=S \
+    persist.log.tag.ContrastColorUtil=S
 

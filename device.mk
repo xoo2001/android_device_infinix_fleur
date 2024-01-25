@@ -56,7 +56,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # APN config
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+    $(DEVICE_PATH)/configs/apn/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
 # Bootctrl
 PRODUCT_PACKAGES += \
@@ -74,18 +74,9 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration.xml \
     $(DEVICE_PATH)/bluetooth/audio/config/sysbta_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysbta_audio_policy_configuration_7_0.xml
 
-# Dexpreopt
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SettingsGoogle \
-    SystemUIGoogle
-
 # DT2W
 PRODUCT_PACKAGES += \
     DT2W-Service-Fleur
-
-# GCAM GO
-PRODUCT_PACKAGES += \
-    GCamGOPrebuilt-V4
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -98,12 +89,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/configs/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
-
-# FMRadio
-BOARD_HAVE_MTK_FM := true
-PRODUCT_PACKAGES += \
-    libfmjni \
-    FMRadio
 
 # Init
 PRODUCT_PACKAGES += \
@@ -120,8 +105,6 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0_system \
-    android.hidl.manager@1.0_system \
     libhidltransport \
     libhwbinder
 
@@ -136,10 +119,6 @@ PRODUCT_PACKAGES += \
 # MTK In-call service
 PRODUCT_PACKAGES += \
     MtkInCallService
-
-# Call recording
-PRODUCT_PACKAGES += \
-    com.google.android.apps.dialer.call_recording_audio.features.xml
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -203,14 +182,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PowerOffAlarm
 
-# Few Properties
-PRODUCT_PROPERTY_OVERRIDES += \
-        ro.secure=0 \
-        ro.adb.secure=1 \
-        ro.debuggable=1 \
-        persist.service.adb.enable=1 \
-        persist.sys.usb.config=adb,mtp
-
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6781:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6781
@@ -219,13 +190,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
     hardware/mediatek
-
-# Symbols
-PRODUCT_PACKAGES += \
-    libshim_vtservice \
-
-# Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Telephony
 PRODUCT_BOOT_JARS += \
@@ -237,13 +201,6 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-base \
     mediatek-telephony-common
 
-# TextClassifier
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/textclassifier/actions_suggestions.universal.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/actions_suggestions.universal.model \
-    $(LOCAL_PATH)/textclassifier/textclassifier.en.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/textclassifier.en.model \
-    $(LOCAL_PATH)/textclassifier/lang_id.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/lang_id.model \
-    $(LOCAL_PATH)/textclassifier/textclassifier.universal.model:$(TARGET_COPY_OUT_SYSTEM)/etc/textclassifier/textclassifier.universal.model
-
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0
@@ -251,24 +208,3 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 31
 PRODUCT_EXTRA_VNDK_VERSIONS := 31
-
-# BackPressure Propagation
-PRODUCT_ODM_PROPERTIES += \
-    debug.sf.disable_client_composition_cache=0
-
-USE_DEX2OAT_DEBUG := false
-WITH_DEXPREOPT_DEBUG_INFO := false
-PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-
-# Speed profile services and wifi-service to reduce RAM and storage.
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
-
-# Do not generate libartd.
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-
-# Strip the local variable table and the local variable type table to reduce
-# the size of the system image. This has no bearing on stack traces, but will
-# leave less information available via JDWP.
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
