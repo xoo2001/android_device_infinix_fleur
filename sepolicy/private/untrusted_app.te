@@ -16,3 +16,5 @@ allow untrusted_app block_device:dir { getattr };
 allow untrusted_app proc_pid_max:file { open };
 allow untrusted_app sysfs_therm:file { getattr };
 allow untrusted_app vendor_sysfs_battery_supply:dir { search };
+allow untrusted_app qemu_hw_prop:file {read};
+allow untrusted_app proc_tty_drivers:file {read};
