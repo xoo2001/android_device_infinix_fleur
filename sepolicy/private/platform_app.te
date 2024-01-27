@@ -1,3 +1,4 @@
 allow platform_app zygote:unix_stream_socket { getopt };
 get_prop(platform_app, audio_config_prop)
 allow platform_app self:dir rw_dir_perms;
+allow platform_app sysfs_zram:dir { search };
