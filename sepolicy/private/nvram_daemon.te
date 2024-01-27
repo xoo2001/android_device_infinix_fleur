@@ -1,0 +1,2 @@
+allow nvram_daemon proc_cmdline:file { open };
+allow nvram_daemon sysfs_dt_firmware_android:file { read };
