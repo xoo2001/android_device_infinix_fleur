@@ -21,6 +21,6 @@
      for different hardware and product builds.  Do not translate. -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<dimen name="status_bar_padding_start">8.0dip</dimen>
-<dimen name="status_bar_padding_end">8.0dip</dimen>
+<dimen name="status_bar_padding_start">12.0dip</dimen>
+<dimen name="status_bar_padding_end">5.0dip</dimen>
 </resources>
