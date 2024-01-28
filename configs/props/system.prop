@@ -40,6 +40,9 @@ persist.vendor.dc_backlight.enable=false
 ro.display.type=oled
 vendor.hbm.enable=true
 
+# FEAS
+ro.feas.enable=true
+
 # Fingerprint
 ro.hardware.fp.sideCap=true
 
