@@ -160,24 +160,7 @@ PRODUCT_COPY_FILES += \
     $(foreach file,$(wildcard $(LOCAL_PATH)/configs/perf/*), \
         $(file):$(addprefix $(TARGET_COPY_OUT_VENDOR)/etc/, $(notdir $(file))) )
 
-# Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.mediatek-libperfmgr
-
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.0.vendor \
-    android.hardware.power@1.1.vendor \
-    android.hardware.power@1.2.vendor \
-    android.hardware.power@1.3.vendor
-
-PRODUCT_PACKAGES += \
-    libmtkperf_client_vendor \
-    libmtkperf_client
-
-PRODUCT_PACKAGES += \
-    vendor.mediatek.hardware.mtkpower@1.0.vendor \
-    vendor.mediatek.hardware.mtkpower@1.1.vendor \
-    vendor.mediatek.hardware.mtkpower@1.2-service.stub \
     vendor.qti.hardware.perf@2.2
 
 # PowerOffAlarm
