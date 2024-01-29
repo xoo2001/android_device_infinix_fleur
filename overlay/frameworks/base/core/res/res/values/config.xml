@@ -34,7 +34,7 @@
     <bool name="config_is_powerbutton_fps">true</bool>
 
     <!-- Does the device has a fps on power. -->
-    <bool name="config_fingerprintWakeAndUnlock">false</bool>
+    <bool name="config_fingerprintWakeAndUnlock">true</bool>
 
     <bool name="config_fpCancelIfNotIdle">true</bool>
 
