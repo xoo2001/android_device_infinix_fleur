@@ -1,3 +1,4 @@
+type alarm_device, domain;
 type power_off_alarm, domain, mlstrustedsubject;
 app_domain(power_off_alarm)
 allow power_off_alarm app_api_service:service_manager find;
