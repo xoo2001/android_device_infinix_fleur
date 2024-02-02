@@ -101,9 +101,11 @@
     <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/bms/fastcharge_mode</string>
 
     <!-- The default refresh rate -->
-    <integer name="config_defaultRefreshRate">60</integer>
+    <integer name="config_defaultRefreshRate">0</integer>
 
     <!-- The default peak refresh rate. -->
     <integer name="config_defaultPeakRefreshRate">90</integer>
 
+    <!-- Flag indicating whether we should enable smart battery. -->
+    <bool name="config_smart_battery_available">true</bool>
 </resources>
