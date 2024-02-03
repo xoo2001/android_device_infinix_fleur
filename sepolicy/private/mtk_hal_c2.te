@@ -1,0 +1,1 @@
+allow mtk_hal_c2 sysfs_boot_mode:file { read };
