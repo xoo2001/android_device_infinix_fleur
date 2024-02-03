@@ -1,0 +1,2 @@
+allow mnld gsi_metadata_file:dir { search };
+allow mnld default_prop:file { read };
