@@ -1,2 +1,3 @@
 type mtk_hal_camera, domain;
 get_prop(mtk_hal_camera, default_prop)
+allow mtk_hal_camera system_data_file:dir { write search };
