@@ -65,6 +65,9 @@ fi
 
 function blob_fixup {
     case "$1" in
+    vendor/lib64/libmtkcam_featurepolicy.so)
+        sed -i "s|\xE8\x87\x40\xB9|\x28\x02\x80\x52|g" "${2}"
+        ;;
     esac
 }
 
