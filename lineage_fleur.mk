@@ -12,7 +12,6 @@ $(call inherit-product-if-exists, vendor/gapps/common.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Build Flags
-TARGET_INCLUDE_PIXEL_CHARGER := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_TOUCHGESTURES := true
