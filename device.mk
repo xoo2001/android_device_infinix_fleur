@@ -117,6 +117,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.fleur
 
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend
+
 # MTK In-call service
 PRODUCT_PACKAGES += \
     MtkInCallService
