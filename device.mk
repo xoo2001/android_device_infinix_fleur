@@ -109,6 +109,9 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhwbinder
 
+# Enable DM file pre-opting to reduce first boot time
+PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
+
 # Kernel
 PRODUCT_COPY_FILES += \
     $(KERNEL_PATH)/dtb.img:dtb.img
