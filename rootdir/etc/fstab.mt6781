@@ -101,4 +101,4 @@ product /product ext4 ro wait,slotselect,avb,logical,first_stage_mount
 
 /dev/block/platform/bootdevice/by-name/vbmeta /vbmeta emmc defaults defaults
 
-/dev/block/zram0 none swap defaults zramsize=40%,max_comp_streams=8
+/dev/block/zram0 none swap defaults zramsize=55%,max_comp_streams=8
