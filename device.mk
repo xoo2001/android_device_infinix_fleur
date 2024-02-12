@@ -194,10 +194,6 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-base \
     mediatek-telephony-common
 
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0
-
 # Inherit several Android Go Configurations (Beneficial for everyone, even on non-Go devices)
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
