@@ -23,6 +23,7 @@ ro.vendor.mtk.bt_sap_enable=true
 persist.bluetooth.a2dp_offload.disabled=true
 ro.bluetooth.a2dp_offload.supported=false
 persist.vendor.btstack.enable.lpa=true
+persist.vendor.bt.a2dp.aac_whitelist=false
 
 # Sysbta
 persist.bluetooth.system_audio_hal.enabled=1
