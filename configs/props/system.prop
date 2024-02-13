@@ -44,6 +44,7 @@ dalvik.vm.dex2oat64.enabled=true
 persist.vendor.dc_backlight.enable=false
 ro.display.type=oled
 vendor.hbm.enable=true
+debug.force_no_blanking=true
 
 # FEAS
 ro.feas.enable=true
