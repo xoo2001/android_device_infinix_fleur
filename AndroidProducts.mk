@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_fleur.mk
+    $(LOCAL_DIR)/derp_fleur.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_fleur-user \
-    lineage_fleur-userdebug \
-    lineage_fleur-eng
+    derp_fleur-user \
+    derp_fleur-userdebug \
+    derp_fleur-eng
