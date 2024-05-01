@@ -15,7 +15,7 @@
 static const variant_info_t fleur_info = {
     .hwc_value = "Global",
     .sku_value = "fleur",
-    .brand = "Redmi",
+    .brand = "Infinix",
     .device = "fleur",
     .marketname = "Infinix Note 10 Pro",
     .model = "X695C",

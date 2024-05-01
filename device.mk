@@ -146,9 +146,6 @@ PRODUCT_PACKAGES += \
 # Runtine Device Name Overlays
 PRODUCT_PACKAGES += \
     FleurSettingsProviderOverlay \
-    FleurpSettingsProviderOverlay \
-    MielSettingsProviderOverlay \
-    MielpSettingsProviderOverlay \
     SettingsLibOverlayFleur \
     SimpleDeviceConfigOverlayFleur
 
