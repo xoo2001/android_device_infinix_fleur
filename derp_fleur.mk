@@ -6,7 +6,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Inherit from fleur device
-$(call inherit-product, $(LOCAL_PATH)/device.mk)
+$(call inherit-product, device/infinix/fleur/device.mk)
 
 # Build Flags
 TARGET_SUPPORTS_QUICK_TAP := true
