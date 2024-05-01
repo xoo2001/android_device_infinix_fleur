@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "X695CSettingsProviderOverlay",
+    theme: "X695CSettingsProviderOverlay",
+    sdk_version: "current",
+    product_specific: true
+}

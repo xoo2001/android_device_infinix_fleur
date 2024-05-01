@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=fleur
+DEVICE=X695C
 VENDOR=infinix
 
 # Load extract_utils and do some sanity checks

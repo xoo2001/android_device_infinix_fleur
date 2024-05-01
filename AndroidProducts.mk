@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_fleur.mk
+    $(LOCAL_DIR)/derp_X695C.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_fleur-user \
-    derp_fleur-userdebug \
-    derp_fleur-eng
+    derp_X695C-user \
+    derp_X695C-userdebug \
+    derp_X695C-eng

@@ -15,7 +15,7 @@
 //
 
 runtime_resource_overlay {
-    name: "CarrierConfigOverlayFleur",
+    name: "CarrierConfigOverlayX695C",
     sdk_version: "current",
     resource_dirs: ["res"],
     product_specific: true

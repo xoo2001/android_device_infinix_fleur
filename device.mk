@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/fleur
+DEVICE_PATH := device/infinix/X695C
 
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -16,7 +16,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/infinix/fleur/fleur-vendor.mk)
+$(call inherit-product, vendor/infinix/X695C/X695C-vendor.mk)
 
 # A/B
 AB_OTA_UPDATER := true
@@ -76,7 +76,7 @@ PRODUCT_COPY_FILES += \
 
 # DT2W
 PRODUCT_PACKAGES += \
-    DT2W-Service-Fleur
+    DT2W-Service-fleur
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -112,7 +112,7 @@ PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.fleur
+    android.hardware.lights-service.X695C
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -136,18 +136,18 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Runtime Resource Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResOverlayFleur \
-    TetheringOverlayFleur \
-    WifiOverlayFleur \
-    SystemUIOverlayFleur \
-    SettingsOverlayFleur \
-    SimpleDeviceConfigOverlayFleur
+    FrameworksResOverlayX695C \
+    TetheringOverlayX695C \
+    WifiOverlayX695C \
+    SystemUIOverlayX695C \
+    SettingsOverlayX695C \
+    SimpleDeviceConfigOverlayX695C
 
 # Runtine Device Name Overlays
 PRODUCT_PACKAGES += \
-    FleurSettingsProviderOverlay \
-    SettingsLibOverlayFleur \
-    SimpleDeviceConfigOverlayFleur
+    X695CSettingsProviderOverlay \
+    SettingsLibOverlayX695C \
+    SimpleDeviceConfigOverlayX695C
 
 # Permissions
 PRODUCT_COPY_FILES += \

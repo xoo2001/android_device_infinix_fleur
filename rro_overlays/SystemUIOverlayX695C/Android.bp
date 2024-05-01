@@ -15,7 +15,7 @@
 //
 
 runtime_resource_overlay {
-    name: "SettingsOverlayFleur",
+    name: "SystemUIOverlayX695C",
     sdk_version: "current",
     resource_dirs: ["res"],
     product_specific: true

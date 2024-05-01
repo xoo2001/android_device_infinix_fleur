@@ -4,8 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/fleur
-VENDOR_PATH := vendor/infinix/fleur
+DEVICE_PATH := device/infinix/X695C
+VENDOR_PATH := vendor/infinix/X695C
 
 
 # Architecture
@@ -27,13 +27,13 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Assertion
-TARGET_OTA_ASSERT_DEVICE := fleur,X695C
+TARGET_OTA_ASSERT_DEVICE := X695C
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := fleur
+TARGET_BOOTLOADER_BOARD_NAME := X695C
 TARGET_NO_BOOTLOADER := true
 
 # Broken flags
@@ -45,8 +45,8 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 TARGET_SCREEN_DENSITY := 320
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_infinix_fleur
-TARGET_RECOVERY_DEVICE_MODULES ?= init_infinix_fleur
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_infinix_X695C
+TARGET_RECOVERY_DEVICE_MODULES ?= init_infinix_X695C
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
@@ -160,4 +160,4 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
 
 # Firmware
--include vendor/infinix/fleur/BoardConfigVendor.mk
+-include vendor/infinix/X695C/BoardConfigVendor.mk
