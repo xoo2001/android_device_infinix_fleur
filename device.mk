@@ -4,8 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/fleur
-KERNEL_PATH := kernel/xiaomi/fleur
+DEVICE_PATH := device/infinix/fleur
 
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -17,7 +16,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/fleur/fleur-vendor.mk)
+$(call inherit-product, vendor/infinix/fleur/fleur-vendor.mk)
 
 # A/B
 AB_OTA_UPDATER := true
@@ -93,10 +92,10 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mt6781.rc
+    init.mt6785.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.mt6781.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.mt6781.rc
+    $(LOCAL_PATH)/rootdir/etc/init.mt6785.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.mt6785.rc
 
 # Health
 PRODUCT_PACKAGES += \
@@ -110,10 +109,6 @@ PRODUCT_PACKAGES += \
 
 # Enable DM file pre-opting to reduce first boot time
 PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
-
-# Kernel
-PRODUCT_COPY_FILES += \
-    $(KERNEL_PATH)/dtb.img:dtb.img
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -177,7 +172,7 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6781:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6781
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6785$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6785
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/fleur
-VENDOR_PATH := vendor/xiaomi/fleur
-KERNEL_PATH := kernel/xiaomi/fleur
+DEVICE_PATH := device/infinix/fleur
+VENDOR_PATH := vendor/infinix/fleur
+
 
 # Architecture
 TARGET_ARCH := arm64
@@ -27,7 +27,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Assertion
-TARGET_OTA_ASSERT_DEVICE := fleur,miel,fleur_p,miel_p
+TARGET_OTA_ASSERT_DEVICE := fleur,X695C
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
@@ -42,7 +42,7 @@ BUILD_BROKEN_PREBUILT_ELF_FILES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Display
-TARGET_SCREEN_DENSITY := 392
+TARGET_SCREEN_DENSITY := 320
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_fleur
@@ -52,6 +52,7 @@ TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_fleur
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x07c08000
 BOARD_KERNEL_TAGS_OFFSET := 0x0bc08000
@@ -59,18 +60,14 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
-TARGET_KERNEL_CONFIG := fleur_defconfig
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_KERNEL_SEPARATED_DTBO := true
 
-# Kill lineage kernel build task while preserving kernel
+# Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_NO_KERNEL_OVERRIDE := true
-PRODUCT_COPY_FILES += \
-    $(KERNEL_PATH)/Image.gz:kernel
-TARGET_PREBUILT_DTB := $(KERNEL_PATH)/dtb.img
-BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
+BOARD_INCLUDE_DTB_IN_BOOTIMG := 
 
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
@@ -80,7 +77,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072                   # 2048      * 64   (pagesize)
-BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864         # 65536     * 1024 (sdc36)
+BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432         # 65536     * 1024 (sdc36)
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608            # 8192      * 1024 (sdc38)
 
 # Partitions - Dynamic
@@ -117,17 +114,16 @@ BOARD_USES_METADATA_PARTITION := true
 # Prebuilts
 TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS := true
 BUILD_WITHOUT_VENDOR := true
-BOARD_PREBUILT_VENDORIMAGE := $(VENDOR_PATH)/fragments/vendor.img
 
 # Platform
-TARGET_BOARD_PLATFORM := mt6781
+TARGET_BOARD_PLATFORM := mt6785
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
 TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/props/system_ext.prop
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6781
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6785
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USES_RECOVERY_AS_BOOT := true
@@ -163,4 +159,4 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
 
 # Firmware
--include vendor/xiaomi/fleur-firmware/BoardConfigVendor.mk
+-include vendor/infinix/fleur/BoardConfigVendor.mk
