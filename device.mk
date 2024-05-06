@@ -109,10 +109,10 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mt6781.rc
+    init.mt6785.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.mt6781.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.mt6781.rc
+    $(LOCAL_PATH)/rootdir/etc/init.mt6785.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.mt6785.rc
 
 # Health
 PRODUCT_PACKAGES += \
@@ -160,7 +160,7 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6781:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6781
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6785:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6785
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

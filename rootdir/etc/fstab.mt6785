@@ -1,22 +1,22 @@
-# 1 "vendor/mediatek/proprietary/hardware/fstab/mt6781/fstab.in.mt6781"
+# 1 "vendor/mediatek/proprietary/hardware/fstab/mt6785/fstab.in.mt6785"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 341 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "vendor/mediatek/proprietary/hardware/fstab/mt6781/fstab.in.mt6781" 2
-# 173 "vendor/mediatek/proprietary/hardware/fstab/mt6781/fstab.in.mt6781"
-system /system erofs ro wait,slotselect,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+# 1 "vendor/mediatek/proprietary/hardware/fstab/mt6785/fstab.in.mt6785" 2
+# 173 "vendor/mediatek/proprietary/hardware/fstab/mt6785/fstab.in.mt6785"
+system /system ext4 ro wait,slotselect,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 
-vendor /vendor erofs ro wait,slotselect,avb,logical,first_stage_mount
-
-
-product /product erofs ro wait,slotselect,avb,logical,first_stage_mount
+vendor /vendor ext4 ro wait,slotselect,avb,logical,first_stage_mount
 
 
+product /product ext4 ro wait,slotselect,avb,logical,first_stage_mount
 
 
-system_ext /system_ext erofs ro wait,slotselect,avb,logical,first_stage_mount
+
+
+system_ext /system_ext ext4 ro wait,slotselect,avb,logical,first_stage_mount
 
 
 
