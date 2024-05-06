@@ -16,10 +16,10 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_DEVICE := x6827
-PRODUCT_NAME := lineage_x6827
+PRODUCT_DEVICE := X695C
+PRODUCT_NAME := lineage_X695C
 PRODUCT_BRAND := Infinix
-PRODUCT_MODEL := Infinix Hot 20S (x6827)
+PRODUCT_MODEL := Infinix Hot 20S (X695C)
 PRODUCT_MANUFACTURER := Infinix
 
 PRODUCT_GMS_CLIENTID_BASE := android-transsion
@@ -27,4 +27,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-transsion
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="sys_tssi_64_infinix-user 12 SP1A.210812.016 353179 release-keys"
 
-BUILD_FINGERPRINT := Infinix/X6827-OP/Infinix-X6827:12/SP1A.210812.016/230613V911:user/release-keys
+BUILD_FINGERPRINT := Infinix/X695C-OP/Infinix-X695C:12/SP1A.210812.016/230613V911:user/release-keys

@@ -15,7 +15,7 @@
 //
 
 runtime_resource_overlay {
-    name: "SettingsLibOverlayx6827",
+    name: "SettingsLibOverlayX695C",
     sdk_version: "current",
     resource_dirs: ["res"],
     product_specific: true

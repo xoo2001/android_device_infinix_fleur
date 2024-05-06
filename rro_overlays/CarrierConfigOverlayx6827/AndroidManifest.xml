@@ -15,7 +15,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.carrierconfig.x6827">
+    package="com.android.carrierconfig.X695C">
     <application android:hasCode="false" />
     <overlay
       android:targetPackage="com.android.carrierconfig"

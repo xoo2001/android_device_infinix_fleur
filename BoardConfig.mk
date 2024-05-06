@@ -4,8 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/x6827
-VENDOR_PATH := vendor/infinix/x6827-prebuilt
+DEVICE_PATH := device/infinix/X695C
+VENDOR_PATH := vendor/infinix/X695C-prebuilt
 
 # Architecture
 TARGET_ARCH := arm64
@@ -29,7 +29,7 @@ ART_BUILD_HOST_NDEBUG := true
 ART_BUILD_HOST_DEBUG := false
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := fleur,miel,fleurp,mielp,x6827,X6827
+TARGET_OTA_ASSERT_DEVICE := fleur,miel,fleurp,mielp,X695C,X695C
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -38,7 +38,7 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := CY-X6827-H812
+TARGET_BOOTLOADER_BOARD_NAME := CY-X695C-H812
 TARGET_NO_BOOTLOADER := true
 
 # Broken flags

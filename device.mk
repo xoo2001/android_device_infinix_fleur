@@ -4,7 +4,7 @@
  # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/x6827
+DEVICE_PATH := device/infinix/X695C
 
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -16,7 +16,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/infinix/x6827/x6827-vendor.mk)
+$(call inherit-product, vendor/infinix/X695C/X695C-vendor.mk)
 
 # A/B
 AB_OTA_UPDATER := true
@@ -86,7 +86,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 # DT2W
 #PRODUCT_PACKAGES += \
-#    DT2W-Service-x6827
+#    DT2W-Service-X695C
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -142,13 +142,13 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Runtime Resource Overlays
 #PRODUCT_PACKAGES += \
-#    FrameworksResOverlayx6827 \
-#    TetheringOverlayx6827 \
-#    WifiOverlayx6827 \
-#    SystemUIOverlayx6827 \
-#    SettingsOverlayx6827 \
-#    SettingsLibOverlayx6827 \
-#    SimpleDeviceConfigOverlayx6827
+#    FrameworksResOverlayX695C \
+#    TetheringOverlayX695C \
+#    WifiOverlayX695C \
+#    SystemUIOverlayX695C \
+#    SettingsOverlayX695C \
+#    SettingsLibOverlayX695C \
+#    SimpleDeviceConfigOverlayX695C
 
 # Perf
 PRODUCT_COPY_FILES += \

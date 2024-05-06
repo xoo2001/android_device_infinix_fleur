@@ -11,7 +11,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ssos.settingslib.overlay.x6827">
+    package="com.ssos.settingslib.overlay.X695C">
     <application android:hasCode="false" />
     <overlay
       android:targetPackage="com.android.settingslib"

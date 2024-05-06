@@ -15,7 +15,7 @@
 //
 
 runtime_resource_overlay {
-    name: "TetheringOverlayx6827",
+    name: "TetheringOverlayX695C",
     certificate: "platform",
     sdk_version: "current",
     resource_dirs: ["res"],
