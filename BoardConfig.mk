@@ -5,7 +5,6 @@
 #
 
 DEVICE_PATH := device/infinix/X695C
-VENDOR_PATH := vendor/infinix/X695C-prebuilt
 
 # Architecture
 TARGET_ARCH := arm64
